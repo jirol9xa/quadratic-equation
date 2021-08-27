@@ -45,13 +45,13 @@ void \mbox{\hyperlink{_title_8h_a8cb3515b523dac7fd1f9104e840558bb}{linear\+\_\+e
 \begin{DoxyCompactList}\small\item\em Функция для решения линейного уравнения \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_title_8h_af428fc888cc653bceff8ef36e8c2d710}{the\+\_\+quadratic\+\_\+equation}} (struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$ans, struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$Coef)
 \begin{DoxyCompactList}\small\item\em Функция решения через дpискриминант \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{_title_8h_a65a0653e9ac5e2aca2d5846d4c727730}{print\+\_\+answers}} (struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$)
+void \mbox{\hyperlink{_title_8h_a6f0b0ef842999aa0fca0180aa6e7c6cd}{print\+\_\+answers}} (struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$ans)
 \begin{DoxyCompactList}\small\item\em Функция для вывода ответа \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{_title_8h_aa708dbd706e927541a11028c0741e078}{Unit\+Test\+Solution}} (void)
 \begin{DoxyCompactList}\small\item\em Функция, тестирующая программу на экстремальных значениях \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_title_8h_aaade6fb4ca13d25274b2f20873541b29}{input\+\_\+s}} (\mbox{\hyperlink{_title_8h_a9aa0f5e513a4c571d54657c67c6b8585}{T\+E\+ST}}($\ast$test)\mbox{[}6\mbox{]})
 \begin{DoxyCompactList}\small\item\em Функция приема функцией \mbox{\hyperlink{_title_8h_aa708dbd706e927541a11028c0741e078}{Unit\+Test\+Solution()}} коэффиентов уравнения и эталонного ответа \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{_title_8h_a6424fd54286b0589374df46bc7d9f7ce}{compair}} (\mbox{\hyperlink{_title_8h_a9aa0f5e513a4c571d54657c67c6b8585}{T\+E\+ST}} $\ast$, struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$)
+bool \mbox{\hyperlink{_title_8h_a748b27735bc50f2c2e750c1e1a1eb5f9}{compair}} (\mbox{\hyperlink{_title_8h_a9aa0f5e513a4c571d54657c67c6b8585}{T\+E\+ST}} $\ast$test, struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$ans1)
 \begin{DoxyCompactList}\small\item\em Функция сравнения ответов \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_title_8h_af626416bb48a496ff841fa7ce22eb8ef}{menu}} (struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$, struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$)
 \begin{DoxyCompactList}\small\item\em Функция главного меню \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -107,11 +107,11 @@ I\+N\+F\+I\+N\+IT&\\
 
 
 \doxysubsection{Функции}
-\mbox{\Hypertarget{_title_8h_a6424fd54286b0589374df46bc7d9f7ce}\label{_title_8h_a6424fd54286b0589374df46bc7d9f7ce}} 
+\mbox{\Hypertarget{_title_8h_a748b27735bc50f2c2e750c1e1a1eb5f9}\label{_title_8h_a748b27735bc50f2c2e750c1e1a1eb5f9}} 
 \index{Title.h@{Title.h}!compair@{compair}}
 \index{compair@{compair}!Title.h@{Title.h}}
 \doxysubsubsection{\texorpdfstring{compair()}{compair()}}
-{\footnotesize\ttfamily bool compair (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_title_8h_a9aa0f5e513a4c571d54657c67c6b8585}{T\+E\+ST}} $\ast$}]{,  }\item[{struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool compair (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_title_8h_a9aa0f5e513a4c571d54657c67c6b8585}{T\+E\+ST}} $\ast$}]{test,  }\item[{struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$}]{ans1 }\end{DoxyParamCaption})}
 
 
 
@@ -216,11 +216,11 @@ I\+N\+F\+I\+N\+IT&\\
 
 См. определение в файле solution.\+c строка 107
 
-\mbox{\Hypertarget{_title_8h_a65a0653e9ac5e2aca2d5846d4c727730}\label{_title_8h_a65a0653e9ac5e2aca2d5846d4c727730}} 
+\mbox{\Hypertarget{_title_8h_a6f0b0ef842999aa0fca0180aa6e7c6cd}\label{_title_8h_a6f0b0ef842999aa0fca0180aa6e7c6cd}} 
 \index{Title.h@{Title.h}!print\_answers@{print\_answers}}
 \index{print\_answers@{print\_answers}!Title.h@{Title.h}}
 \doxysubsubsection{\texorpdfstring{print\_answers()}{print\_answers()}}
-{\footnotesize\ttfamily void print\+\_\+answers (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void print\+\_\+answers (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$}]{ans }\end{DoxyParamCaption})}
 
 
 

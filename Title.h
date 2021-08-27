@@ -108,7 +108,7 @@ void the_quadratic_equation(struct Answers* ans, struct Coefficients* Coef); // 
 	Данная функция выводит члены структуры Answers, а именно количество корней и их значения
 	(если они существуют).
 */
-void print_answers(struct Answers*);
+void print_answers(struct Answers* ans);
 
 /*!
 	\brief Функция, тестирующая программу на экстремальных значениях
@@ -132,7 +132,7 @@ void input_s(TEST (*test)[6]); //Функция, обрабатывающая в
 	\param ans1 Структура, хранящая ответ, полученный программой
 */
 
-bool compair(TEST *, struct Answers *); //Функция, сравнивающая эталонный ответ с тем, который получила программа
+bool compair(TEST *test, struct Answers * ans1); //Функция, сравнивающая эталонный ответ с тем, который получила программа
 
 /*!
 	\brief Функция главного меню
