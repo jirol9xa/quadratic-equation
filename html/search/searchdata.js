@@ -1,10 +1,13 @@
 var indexSectionsWithContent =
 {
-  0: "abceilmprstwz",
-  1: "ac",
-  2: "a",
-  3: "eilmpstw",
-  4: "abcrz"
+  0: "abceilmoprstuwz",
+  1: "act",
+  2: "mst",
+  3: "ceilmpstuw",
+  4: "abcrz",
+  5: "t",
+  6: "a",
+  7: "iotz"
 };
 
 var indexSectionNames =
@@ -13,7 +16,10 @@ var indexSectionNames =
   1: "classes",
   2: "files",
   3: "functions",
-  4: "variables"
+  4: "variables",
+  5: "typedefs",
+  6: "enums",
+  7: "enumvalues"
 };
 
 var indexSectionLabels =
@@ -22,6 +28,9 @@ var indexSectionLabels =
   1: "Классы",
   2: "Файлы",
   3: "Функции",
-  4: "Переменные"
+  4: "Переменные",
+  5: "Определения типов",
+  6: "Перечисления",
+  7: "Элементы перечислений"
 };
 

@@ -1,0 +1,171 @@
+\hypertarget{solution_8c}{}\doxysection{Файл solution.\+c}
+\label{solution_8c}\index{solution.c@{solution.c}}
+{\ttfamily \#include \char`\"{}Title.\+h\char`\"{}}\newline
+Граф включаемых заголовочных файлов для solution.\+c\+:
+% FIG 0
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{solution_8c_a3a73fa202e2b7b11d736f6d525070e69}{input}} (struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$Coef)
+\begin{DoxyCompactList}\small\item\em Функция для ввода данных \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{solution_8c_a4a444f3cac3d74fbf555e1bb2a28f06d}{eatline}} ()
+\begin{DoxyCompactList}\small\item\em Функция очищения ввода \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{solution_8c_a08bb5542e39378159307e75169a9df73}{wrong\+\_\+input}} ()
+\begin{DoxyCompactList}\small\item\em Функция повторного ввода \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{solution_8c_abde6b1c57ec7999659dae12b3c22381a}{solve\+\_\+equation}} (struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$ans, struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$Coef)
+\begin{DoxyCompactList}\small\item\em Функция, управляющая решением уравнения \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{solution_8c_a8cb3515b523dac7fd1f9104e840558bb}{linear\+\_\+equation}} (struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$ans, struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$Coef)
+\begin{DoxyCompactList}\small\item\em Функция для решения линейного уравнения \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{solution_8c_af428fc888cc653bceff8ef36e8c2d710}{the\+\_\+quadratic\+\_\+equation}} (struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$ans, struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$Coef)
+\begin{DoxyCompactList}\small\item\em Функция решения через дpискриминант \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{solution_8c_a6f0b0ef842999aa0fca0180aa6e7c6cd}{print\+\_\+answers}} (struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$ans)
+\begin{DoxyCompactList}\small\item\em Функция для вывода ответа \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{solution_8c_a849a264c2c3431ebc12e776075ad0054}{menu}} (struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$ans, struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$Coef)
+\begin{DoxyCompactList}\small\item\em Функция главного меню \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{solution_8c_a4a444f3cac3d74fbf555e1bb2a28f06d}\label{solution_8c_a4a444f3cac3d74fbf555e1bb2a28f06d}} 
+\index{solution.c@{solution.c}!eatline@{eatline}}
+\index{eatline@{eatline}!solution.c@{solution.c}}
+\doxysubsubsection{\texorpdfstring{eatline()}{eatline()}}
+{\footnotesize\ttfamily void eatline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Функция очищения ввода 
+
+При неверном формате ввода коэффициентов данная функция очищает входные данные, чтобы scanf() могла обработать следующую попытку ввода 
+
+См. определение в файле solution.\+c строка 27
+
+\mbox{\Hypertarget{solution_8c_a3a73fa202e2b7b11d736f6d525070e69}\label{solution_8c_a3a73fa202e2b7b11d736f6d525070e69}} 
+\index{solution.c@{solution.c}!input@{input}}
+\index{input@{input}!solution.c@{solution.c}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily void input (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$}]{Coefficients }\end{DoxyParamCaption})}
+
+
+
+Функция для ввода данных 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Coefficient} & Структура для хранения коэффициентов уравнения\\
+\hline
+\end{DoxyParams}
+Функция записывает в уже созданную структуру значения a,b и с ~\newline
+ 
+
+См. определение в файле solution.\+c строка 4
+
+\mbox{\Hypertarget{solution_8c_a8cb3515b523dac7fd1f9104e840558bb}\label{solution_8c_a8cb3515b523dac7fd1f9104e840558bb}} 
+\index{solution.c@{solution.c}!linear\_equation@{linear\_equation}}
+\index{linear\_equation@{linear\_equation}!solution.c@{solution.c}}
+\doxysubsubsection{\texorpdfstring{linear\_equation()}{linear\_equation()}}
+{\footnotesize\ttfamily void linear\+\_\+equation (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$}]{ans,  }\item[{struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$}]{Coef }\end{DoxyParamCaption})}
+
+
+
+Функция для решения линейного уравнения 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ans} & Структура для хранения ответа \\
+\hline
+{\em Coef} & Структура для хранения коэффициентов уравнения\\
+\hline
+\end{DoxyParams}
+Данная функция вызывается функцией \mbox{\hyperlink{_title_8h_abde6b1c57ec7999659dae12b3c22381a}{solve\+\_\+equation()}} в случае, если а = 0 (то есть уравнение является линейным) 
+
+См. определение в файле solution.\+c строка 51
+
+\mbox{\Hypertarget{solution_8c_a849a264c2c3431ebc12e776075ad0054}\label{solution_8c_a849a264c2c3431ebc12e776075ad0054}} 
+\index{solution.c@{solution.c}!menu@{menu}}
+\index{menu@{menu}!solution.c@{solution.c}}
+\doxysubsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily void menu (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$}]{,  }\item[{struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Функция главного меню 
+
+Функция спрашивает у пользователя, хочет ли он решить новое уравнение или проверить программу на экстремальных значениях 
+
+См. определение в файле solution.\+c строка 107
+
+\mbox{\Hypertarget{solution_8c_a6f0b0ef842999aa0fca0180aa6e7c6cd}\label{solution_8c_a6f0b0ef842999aa0fca0180aa6e7c6cd}} 
+\index{solution.c@{solution.c}!print\_answers@{print\_answers}}
+\index{print\_answers@{print\_answers}!solution.c@{solution.c}}
+\doxysubsubsection{\texorpdfstring{print\_answers()}{print\_answers()}}
+{\footnotesize\ttfamily void print\+\_\+answers (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Функция для вывода ответа 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ans} & Структура для хранения ответа\\
+\hline
+\end{DoxyParams}
+Данная функция выводит члены структуры \mbox{\hyperlink{struct_answers}{Answers}}, а именно количество корней и их значения (если они существуют). 
+
+См. определение в файле solution.\+c строка 88
+
+\mbox{\Hypertarget{solution_8c_abde6b1c57ec7999659dae12b3c22381a}\label{solution_8c_abde6b1c57ec7999659dae12b3c22381a}} 
+\index{solution.c@{solution.c}!solve\_equation@{solve\_equation}}
+\index{solve\_equation@{solve\_equation}!solution.c@{solution.c}}
+\doxysubsubsection{\texorpdfstring{solve\_equation()}{solve\_equation()}}
+{\footnotesize\ttfamily void solve\+\_\+equation (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$}]{ans,  }\item[{struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$}]{Coef }\end{DoxyParamCaption})}
+
+
+
+Функция, управляющая решением уравнения 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ans} & Структура для хранения ответа \\
+\hline
+{\em Coef} & Структура для хранения коэффициентов уравнения\\
+\hline
+\end{DoxyParams}
+Данная функция вызывает функцию \mbox{\hyperlink{_title_8h_a8cb3515b523dac7fd1f9104e840558bb}{linear\+\_\+equation()}}, если уравнение является линейным (а = 0) и вызывает функцию the\+\_\+quadratic\+\_\+equation в противном случае. 
+
+См. определение в файле solution.\+c строка 39
+
+\mbox{\Hypertarget{solution_8c_af428fc888cc653bceff8ef36e8c2d710}\label{solution_8c_af428fc888cc653bceff8ef36e8c2d710}} 
+\index{solution.c@{solution.c}!the\_quadratic\_equation@{the\_quadratic\_equation}}
+\index{the\_quadratic\_equation@{the\_quadratic\_equation}!solution.c@{solution.c}}
+\doxysubsubsection{\texorpdfstring{the\_quadratic\_equation()}{the\_quadratic\_equation()}}
+{\footnotesize\ttfamily void the\+\_\+quadratic\+\_\+equation (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$}]{ans,  }\item[{struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$}]{Coef }\end{DoxyParamCaption})}
+
+
+
+Функция решения через дpискриминант 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ans} & Структура для хранения ответа \\
+\hline
+{\em Coef} & Структура для хранения коэффициентов уравнения\\
+\hline
+\end{DoxyParams}
+Данная функция вызывается функцией \mbox{\hyperlink{_title_8h_abde6b1c57ec7999659dae12b3c22381a}{solve\+\_\+equation()}} в случае, если а != 0 (то есть уравнение является квадратным). Решение происходит через дискриминант. 
+
+См. определение в файле solution.\+c строка 69
+
+\mbox{\Hypertarget{solution_8c_a08bb5542e39378159307e75169a9df73}\label{solution_8c_a08bb5542e39378159307e75169a9df73}} 
+\index{solution.c@{solution.c}!wrong\_input@{wrong\_input}}
+\index{wrong\_input@{wrong\_input}!solution.c@{solution.c}}
+\doxysubsubsection{\texorpdfstring{wrong\_input()}{wrong\_input()}}
+{\footnotesize\ttfamily void wrong\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Функция повторного ввода 
+
+При неверном формате ввода коэффициентов данная функция запрашивает у пользователя повторный ввод данных, выводя перед этим сообщение \char`\"{}\+Just enter a number\char`\"{}. Используется совместно с \mbox{\hyperlink{_title_8h_a4a444f3cac3d74fbf555e1bb2a28f06d}{eatline()}} 
+
+См. определение в файле solution.\+c строка 34
+

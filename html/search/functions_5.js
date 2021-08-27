@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['solve_5fequation_25',['solve_equation',['../all__in__one_8c.html#abde6b1c57ec7999659dae12b3c22381a',1,'all_in_one.c']]]
+  ['print_5fanswers_44',['print_answers',['../solution_8c.html#a6f0b0ef842999aa0fca0180aa6e7c6cd',1,'print_answers(struct Answers *ans):&#160;solution.c'],['../_title_8h.html#a65a0653e9ac5e2aca2d5846d4c727730',1,'print_answers(struct Answers *):&#160;solution.c']]]
 ];

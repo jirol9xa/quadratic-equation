@@ -1,0 +1,320 @@
+\hypertarget{_title_8h}{}\doxysection{Файл Title.\+h}
+\label{_title_8h}\index{Title.h@{Title.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+Граф включаемых заголовочных файлов для Title.\+h\+:
+% FIG 0
+Граф файлов, в которые включается этот файл\+:
+% FIG 1
+\doxysubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_answers}{Answers}}
+\begin{DoxyCompactList}\small\item\em Структура для хранения ответов \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_coefficients}{Coefficients}}
+\begin{DoxyCompactList}\small\item\em Структура для хранения коэффициентов уравнения \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_test}{Test}}
+\begin{DoxyCompactList}\small\item\em Стурктура для хранения теста \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_test}{Test}} \mbox{\hyperlink{_title_8h_a9aa0f5e513a4c571d54657c67c6b8585}{T\+E\+ST}}
+\begin{DoxyCompactList}\small\item\em Стурктура для хранения теста \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9d}{Amount}} \{ \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9dae117e3533122c80b262257b49b21cddf}{Z\+E\+RO}}, 
+\mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9da7a725f13af144bdef532d0389ba75e0d}{O\+NE}}, 
+\mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9da0e793500a63ffa575b9b712ca3bc9851}{T\+WO}}, 
+\mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9dac4ed77dc1583aaa27653604f06f49176}{I\+N\+F\+I\+N\+IT}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_title_8h_ad18b80abd5da76957e600fff50cc3880}{input}} (struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$\mbox{\hyperlink{struct_coefficients}{Coefficients}})
+\begin{DoxyCompactList}\small\item\em Функция для ввода данных \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_title_8h_a4a444f3cac3d74fbf555e1bb2a28f06d}{eatline}} ()
+\begin{DoxyCompactList}\small\item\em Функция очищения ввода \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_title_8h_a08bb5542e39378159307e75169a9df73}{wrong\+\_\+input}} ()
+\begin{DoxyCompactList}\small\item\em Функция повторного ввода \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_title_8h_abde6b1c57ec7999659dae12b3c22381a}{solve\+\_\+equation}} (struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$ans, struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$Coef)
+\begin{DoxyCompactList}\small\item\em Функция, управляющая решением уравнения \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_title_8h_a8cb3515b523dac7fd1f9104e840558bb}{linear\+\_\+equation}} (struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$ans, struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$Coef)
+\begin{DoxyCompactList}\small\item\em Функция для решения линейного уравнения \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_title_8h_af428fc888cc653bceff8ef36e8c2d710}{the\+\_\+quadratic\+\_\+equation}} (struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$ans, struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$Coef)
+\begin{DoxyCompactList}\small\item\em Функция решения через дpискриминант \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_title_8h_a65a0653e9ac5e2aca2d5846d4c727730}{print\+\_\+answers}} (struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Функция для вывода ответа \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_title_8h_aa708dbd706e927541a11028c0741e078}{Unit\+Test\+Solution}} (void)
+\begin{DoxyCompactList}\small\item\em Функция, тестирующая программу на экстремальных значениях \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_title_8h_aaade6fb4ca13d25274b2f20873541b29}{input\+\_\+s}} (\mbox{\hyperlink{_title_8h_a9aa0f5e513a4c571d54657c67c6b8585}{T\+E\+ST}}($\ast$test)\mbox{[}6\mbox{]})
+\begin{DoxyCompactList}\small\item\em Функция приема функцией \mbox{\hyperlink{_title_8h_aa708dbd706e927541a11028c0741e078}{Unit\+Test\+Solution()}} коэффиентов уравнения и эталонного ответа \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_title_8h_a6424fd54286b0589374df46bc7d9f7ce}{compair}} (\mbox{\hyperlink{_title_8h_a9aa0f5e513a4c571d54657c67c6b8585}{T\+E\+ST}} $\ast$, struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Функция сравнения ответов \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_title_8h_af626416bb48a496ff841fa7ce22eb8ef}{menu}} (struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$, struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Функция главного меню \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{_title_8h_a554f7b66b1ba49443447eb746978c268}{zero}} = 1e-\/20
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Типы}
+\mbox{\Hypertarget{_title_8h_a9aa0f5e513a4c571d54657c67c6b8585}\label{_title_8h_a9aa0f5e513a4c571d54657c67c6b8585}} 
+\index{Title.h@{Title.h}!TEST@{TEST}}
+\index{TEST@{TEST}!Title.h@{Title.h}}
+\doxysubsubsection{\texorpdfstring{TEST}{TEST}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_test}{Test}} \mbox{\hyperlink{_title_8h_a9aa0f5e513a4c571d54657c67c6b8585}{T\+E\+ST}}}
+
+
+
+Стурктура для хранения теста 
+
+Данная структура сохраняет значения коэффициентов a, b, c и эталонный ответ. 
+
+\doxysubsection{Перечисления}
+\mbox{\Hypertarget{_title_8h_a205e037d08a5161254a1965cb7c03b9d}\label{_title_8h_a205e037d08a5161254a1965cb7c03b9d}} 
+\index{Title.h@{Title.h}!Amount@{Amount}}
+\index{Amount@{Amount}!Title.h@{Title.h}}
+\doxysubsubsection{\texorpdfstring{Amount}{Amount}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9d}{Amount}}}
+
+\begin{DoxyEnumFields}{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ZERO@{ZERO}!Title.h@{Title.h}}\index{Title.h@{Title.h}!ZERO@{ZERO}}}\mbox{\Hypertarget{_title_8h_a205e037d08a5161254a1965cb7c03b9dae117e3533122c80b262257b49b21cddf}\label{_title_8h_a205e037d08a5161254a1965cb7c03b9dae117e3533122c80b262257b49b21cddf}} 
+Z\+E\+RO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ONE@{ONE}!Title.h@{Title.h}}\index{Title.h@{Title.h}!ONE@{ONE}}}\mbox{\Hypertarget{_title_8h_a205e037d08a5161254a1965cb7c03b9da7a725f13af144bdef532d0389ba75e0d}\label{_title_8h_a205e037d08a5161254a1965cb7c03b9da7a725f13af144bdef532d0389ba75e0d}} 
+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TWO@{TWO}!Title.h@{Title.h}}\index{Title.h@{Title.h}!TWO@{TWO}}}\mbox{\Hypertarget{_title_8h_a205e037d08a5161254a1965cb7c03b9da0e793500a63ffa575b9b712ca3bc9851}\label{_title_8h_a205e037d08a5161254a1965cb7c03b9da0e793500a63ffa575b9b712ca3bc9851}} 
+T\+WO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INFINIT@{INFINIT}!Title.h@{Title.h}}\index{Title.h@{Title.h}!INFINIT@{INFINIT}}}\mbox{\Hypertarget{_title_8h_a205e037d08a5161254a1965cb7c03b9dac4ed77dc1583aaa27653604f06f49176}\label{_title_8h_a205e037d08a5161254a1965cb7c03b9dac4ed77dc1583aaa27653604f06f49176}} 
+I\+N\+F\+I\+N\+IT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+См. определение в файле Title.\+h строка 5
+
+
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{_title_8h_a6424fd54286b0589374df46bc7d9f7ce}\label{_title_8h_a6424fd54286b0589374df46bc7d9f7ce}} 
+\index{Title.h@{Title.h}!compair@{compair}}
+\index{compair@{compair}!Title.h@{Title.h}}
+\doxysubsubsection{\texorpdfstring{compair()}{compair()}}
+{\footnotesize\ttfamily bool compair (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_title_8h_a9aa0f5e513a4c571d54657c67c6b8585}{T\+E\+ST}} $\ast$}]{,  }\item[{struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Функция сравнения ответов 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em test} & Структура, хранящая коэффициента и эталонный ответ \\
+\hline
+{\em ans1} & Структура, хранящая ответ, полученный программой \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле test.\+c строка 74
+
+\mbox{\Hypertarget{_title_8h_a4a444f3cac3d74fbf555e1bb2a28f06d}\label{_title_8h_a4a444f3cac3d74fbf555e1bb2a28f06d}} 
+\index{Title.h@{Title.h}!eatline@{eatline}}
+\index{eatline@{eatline}!Title.h@{Title.h}}
+\doxysubsubsection{\texorpdfstring{eatline()}{eatline()}}
+{\footnotesize\ttfamily void eatline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Функция очищения ввода 
+
+При неверном формате ввода коэффициентов данная функция очищает входные данные, чтобы scanf() могла обработать следующую попытку ввода 
+
+См. определение в файле solution.\+c строка 27
+
+\mbox{\Hypertarget{_title_8h_ad18b80abd5da76957e600fff50cc3880}\label{_title_8h_ad18b80abd5da76957e600fff50cc3880}} 
+\index{Title.h@{Title.h}!input@{input}}
+\index{input@{input}!Title.h@{Title.h}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily void input (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$}]{Coefficients }\end{DoxyParamCaption})}
+
+
+
+Функция для ввода данных 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Coefficient} & Структура для хранения коэффициентов уравнения\\
+\hline
+\end{DoxyParams}
+Функция записывает в уже созданную структуру значения a,b и с ~\newline
+ 
+
+См. определение в файле solution.\+c строка 4
+
+\mbox{\Hypertarget{_title_8h_aaade6fb4ca13d25274b2f20873541b29}\label{_title_8h_aaade6fb4ca13d25274b2f20873541b29}} 
+\index{Title.h@{Title.h}!input\_s@{input\_s}}
+\index{input\_s@{input\_s}!Title.h@{Title.h}}
+\doxysubsubsection{\texorpdfstring{input\_s()}{input\_s()}}
+{\footnotesize\ttfamily void input\+\_\+s (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_title_8h_a9aa0f5e513a4c571d54657c67c6b8585}{T\+E\+ST}}($\ast$)}]{test\mbox{[}6\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Функция приема функцией \mbox{\hyperlink{_title_8h_aa708dbd706e927541a11028c0741e078}{Unit\+Test\+Solution()}} коэффиентов уравнения и эталонного ответа 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em test} & Массив структур, хранящих в себе данные о тестах \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле test.\+c строка 37
+
+\mbox{\Hypertarget{_title_8h_a8cb3515b523dac7fd1f9104e840558bb}\label{_title_8h_a8cb3515b523dac7fd1f9104e840558bb}} 
+\index{Title.h@{Title.h}!linear\_equation@{linear\_equation}}
+\index{linear\_equation@{linear\_equation}!Title.h@{Title.h}}
+\doxysubsubsection{\texorpdfstring{linear\_equation()}{linear\_equation()}}
+{\footnotesize\ttfamily void linear\+\_\+equation (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$}]{ans,  }\item[{struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$}]{Coef }\end{DoxyParamCaption})}
+
+
+
+Функция для решения линейного уравнения 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ans} & Структура для хранения ответа \\
+\hline
+{\em Coef} & Структура для хранения коэффициентов уравнения\\
+\hline
+\end{DoxyParams}
+Данная функция вызывается функцией \mbox{\hyperlink{_title_8h_abde6b1c57ec7999659dae12b3c22381a}{solve\+\_\+equation()}} в случае, если а = 0 (то есть уравнение является линейным) 
+
+См. определение в файле solution.\+c строка 51
+
+\mbox{\Hypertarget{_title_8h_af626416bb48a496ff841fa7ce22eb8ef}\label{_title_8h_af626416bb48a496ff841fa7ce22eb8ef}} 
+\index{Title.h@{Title.h}!menu@{menu}}
+\index{menu@{menu}!Title.h@{Title.h}}
+\doxysubsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily void menu (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$}]{,  }\item[{struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Функция главного меню 
+
+Функция спрашивает у пользователя, хочет ли он решить новое уравнение или проверить программу на экстремальных значениях 
+
+См. определение в файле solution.\+c строка 107
+
+\mbox{\Hypertarget{_title_8h_a65a0653e9ac5e2aca2d5846d4c727730}\label{_title_8h_a65a0653e9ac5e2aca2d5846d4c727730}} 
+\index{Title.h@{Title.h}!print\_answers@{print\_answers}}
+\index{print\_answers@{print\_answers}!Title.h@{Title.h}}
+\doxysubsubsection{\texorpdfstring{print\_answers()}{print\_answers()}}
+{\footnotesize\ttfamily void print\+\_\+answers (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Функция для вывода ответа 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ans} & Структура для хранения ответа\\
+\hline
+\end{DoxyParams}
+Данная функция выводит члены структуры \mbox{\hyperlink{struct_answers}{Answers}}, а именно количество корней и их значения (если они существуют). 
+
+См. определение в файле solution.\+c строка 88
+
+\mbox{\Hypertarget{_title_8h_abde6b1c57ec7999659dae12b3c22381a}\label{_title_8h_abde6b1c57ec7999659dae12b3c22381a}} 
+\index{Title.h@{Title.h}!solve\_equation@{solve\_equation}}
+\index{solve\_equation@{solve\_equation}!Title.h@{Title.h}}
+\doxysubsubsection{\texorpdfstring{solve\_equation()}{solve\_equation()}}
+{\footnotesize\ttfamily void solve\+\_\+equation (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$}]{ans,  }\item[{struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$}]{Coef }\end{DoxyParamCaption})}
+
+
+
+Функция, управляющая решением уравнения 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ans} & Структура для хранения ответа \\
+\hline
+{\em Coef} & Структура для хранения коэффициентов уравнения\\
+\hline
+\end{DoxyParams}
+Данная функция вызывает функцию \mbox{\hyperlink{_title_8h_a8cb3515b523dac7fd1f9104e840558bb}{linear\+\_\+equation()}}, если уравнение является линейным (а = 0) и вызывает функцию the\+\_\+quadratic\+\_\+equation в противном случае. 
+
+См. определение в файле solution.\+c строка 39
+
+\mbox{\Hypertarget{_title_8h_af428fc888cc653bceff8ef36e8c2d710}\label{_title_8h_af428fc888cc653bceff8ef36e8c2d710}} 
+\index{Title.h@{Title.h}!the\_quadratic\_equation@{the\_quadratic\_equation}}
+\index{the\_quadratic\_equation@{the\_quadratic\_equation}!Title.h@{Title.h}}
+\doxysubsubsection{\texorpdfstring{the\_quadratic\_equation()}{the\_quadratic\_equation()}}
+{\footnotesize\ttfamily void the\+\_\+quadratic\+\_\+equation (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_answers}{Answers}} $\ast$}]{ans,  }\item[{struct \mbox{\hyperlink{struct_coefficients}{Coefficients}} $\ast$}]{Coef }\end{DoxyParamCaption})}
+
+
+
+Функция решения через дpискриминант 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ans} & Структура для хранения ответа \\
+\hline
+{\em Coef} & Структура для хранения коэффициентов уравнения\\
+\hline
+\end{DoxyParams}
+Данная функция вызывается функцией \mbox{\hyperlink{_title_8h_abde6b1c57ec7999659dae12b3c22381a}{solve\+\_\+equation()}} в случае, если а != 0 (то есть уравнение является квадратным). Решение происходит через дискриминант. 
+
+См. определение в файле solution.\+c строка 69
+
+\mbox{\Hypertarget{_title_8h_aa708dbd706e927541a11028c0741e078}\label{_title_8h_aa708dbd706e927541a11028c0741e078}} 
+\index{Title.h@{Title.h}!UnitTestSolution@{UnitTestSolution}}
+\index{UnitTestSolution@{UnitTestSolution}!Title.h@{Title.h}}
+\doxysubsubsection{\texorpdfstring{UnitTestSolution()}{UnitTestSolution()}}
+{\footnotesize\ttfamily int Unit\+Test\+Solution (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Функция, тестирующая программу на экстремальных значениях 
+
+Данная функция принимает коэффициенты уравнения и эталонный ответ и сравнивает с ответом, который получается функция решения. 
+
+См. определение в файле test.\+c строка 4
+
+\mbox{\Hypertarget{_title_8h_a08bb5542e39378159307e75169a9df73}\label{_title_8h_a08bb5542e39378159307e75169a9df73}} 
+\index{Title.h@{Title.h}!wrong\_input@{wrong\_input}}
+\index{wrong\_input@{wrong\_input}!Title.h@{Title.h}}
+\doxysubsubsection{\texorpdfstring{wrong\_input()}{wrong\_input()}}
+{\footnotesize\ttfamily void wrong\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Функция повторного ввода 
+
+При неверном формате ввода коэффициентов данная функция запрашивает у пользователя повторный ввод данных, выводя перед этим сообщение \char`\"{}\+Just enter a number\char`\"{}. Используется совместно с \mbox{\hyperlink{_title_8h_a4a444f3cac3d74fbf555e1bb2a28f06d}{eatline()}} 
+
+См. определение в файле solution.\+c строка 34
+
+
+
+\doxysubsection{Переменные}
+\mbox{\Hypertarget{_title_8h_a554f7b66b1ba49443447eb746978c268}\label{_title_8h_a554f7b66b1ba49443447eb746978c268}} 
+\index{Title.h@{Title.h}!zero@{zero}}
+\index{zero@{zero}!Title.h@{Title.h}}
+\doxysubsubsection{\texorpdfstring{zero}{zero}}
+{\footnotesize\ttfamily const double zero = 1e-\/20}
+
+
+
+См. определение в файле Title.\+h строка 146
+

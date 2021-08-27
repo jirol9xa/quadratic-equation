@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['eatline_20',['eatline',['../all__in__one_8c.html#a4a444f3cac3d74fbf555e1bb2a28f06d',1,'all_in_one.c']]]
+  ['compair_37',['compair',['../test_8c.html#a748b27735bc50f2c2e750c1e1a1eb5f9',1,'compair(TEST *test, struct Answers *ans1):&#160;test.c'],['../_title_8h.html#a6424fd54286b0589374df46bc7d9f7ce',1,'compair(TEST *, struct Answers *):&#160;test.c']]]
 ];

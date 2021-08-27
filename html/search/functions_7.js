@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wrong_5finput_27',['wrong_input',['../all__in__one_8c.html#a08bb5542e39378159307e75169a9df73',1,'all_in_one.c']]]
+  ['the_5fquadratic_5fequation_46',['the_quadratic_equation',['../solution_8c.html#af428fc888cc653bceff8ef36e8c2d710',1,'the_quadratic_equation(struct Answers *ans, struct Coefficients *Coef):&#160;solution.c'],['../_title_8h.html#af428fc888cc653bceff8ef36e8c2d710',1,'the_quadratic_equation(struct Answers *ans, struct Coefficients *Coef):&#160;solution.c']]]
 ];

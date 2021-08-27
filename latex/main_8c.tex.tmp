@@ -1,0 +1,23 @@
+\hypertarget{main_8c}{}\doxysection{Файл main.\+c}
+\label{main_8c}\index{main.c@{main.c}}
+{\ttfamily \#include \char`\"{}Title.\+h\char`\"{}}\newline
+Граф включаемых заголовочных файлов для main.\+c\+:
+% FIG 0
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле main.\+c строка 4
+

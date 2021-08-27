@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['coefficients_18',['Coefficients',['../struct_coefficients.html',1,'']]]
+  ['coefficients_31',['Coefficients',['../struct_coefficients.html',1,'']]]
 ];
