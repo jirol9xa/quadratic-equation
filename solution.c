@@ -104,22 +104,22 @@ void print_answers(struct Answers* ans) {
 }
 
 
-void menu(struct Answers* ans, struct Coefficients* Coef){
+int menu(){
 	printf("Do you want to solve your equation or check the boundary values? \n");
 	printf("a) Solve       b)Check \n");
-	char ch = 0;
+	char ch;
 	scanf("%c", &ch);
-	if (ch == 'a'){
-		input(Coef);
-		printf("Quadratic equation: %lg*x^2 + %lg*x + %lg = 0 \n", Coef->a, Coef->b, Coef->c);
-		solve_equation(ans, Coef);
-		print_answers(ans);
-		printf("The equation is solved :) \n");
+	while (!strchr("ab", ch)){
+		printf("Just enter \"a\" or \"b\" ");
+		while (getchar() != '\n')
+			continue;
+		scanf("%c", &ch);
 	}
-	else if (ch == 'b'){
-		if (!UnitTestSolution()){
-			printf("Checking failed \n");
-		}
-
+	if  (ch == 'a'){
+		return 1;
 	}
+	else{
+		return 0;
+	}
+	
 }

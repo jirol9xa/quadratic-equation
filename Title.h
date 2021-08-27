@@ -1,6 +1,7 @@
 #include <stdio.h> 
 #include <math.h>
 #include <assert.h>
+#include <string.h>
 
 enum Amount {ZERO, ONE, TWO, INFINIT};
 
@@ -140,7 +141,7 @@ bool compair(TEST *test, struct Answers * ans1); //Функция, сравни�
 	Функция спрашивает у пользователя, хочет ли он решить новое уравнение или проверить программу
 	на экстремальных значениях
 */
-void menu(struct Answers*, struct Coefficients*); 
+int menu(void); 
 
 
 const double zero = 1e-20;
