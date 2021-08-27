@@ -144,4 +144,11 @@ bool compair(TEST *test, struct Answers * ans1); //Функция, сравни�
 int menu(void); 
 
 
+/*! \brief Функция проверяющая коэффициента
+
+	Функция, которая проверяет не равны ли коэффициенты NAN или infinity
+*/
+int check_Coef(struct Coefficients * Coef);
+
+
 const double zero = 1e-20;

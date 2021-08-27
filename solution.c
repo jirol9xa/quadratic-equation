@@ -4,23 +4,28 @@
 void input(struct Coefficients* Coef) {
 	assert(Coef != NULL);
 	printf("Now enter the values a, b, c \n");
-	printf("enter a \n");
-	while(scanf("%lf", &(Coef->a)) !=1){
-		wrong_input();
+	do{
+		printf("enter a \n");
+		while(scanf("%lf", &(Coef->a)) !=1){
+			wrong_input();
+			eatline();
+		}
 		eatline();
-	}
-	eatline();
-	printf("enter b \n");
-	while(scanf("%lf", &(Coef->b)) !=1){
-		wrong_input();
+		printf("enter b \n");
+		while(scanf("%lf", &(Coef->b)) !=1){
+			wrong_input();
+			eatline();
+		}
 		eatline();
+		printf("enter c \n");
+		while(scanf("%lf", &(Coef->c)) !=1){
+			wrong_input();
+			eatline();
+		}
+		printf("We check the coefficients for admissibility \n");
 	}
-	eatline();
-	printf("enter c \n");
-	while(scanf("%lf", &(Coef->c)) !=1){
-		wrong_input();
-		eatline();
-	}
+	while(check_Coef(Coef) != 1);
+	printf("Now answer: \n");
 }
 
 
@@ -123,3 +128,14 @@ int menu(){
 	}
 	
 }
+
+
+int check_Coef(struct Coefficients * Coef){
+	if (Coef->a != NAN && !isfinite(Coef->a) &&
+		Coef->b != NAN && !isfinite(Coef->b) &&
+		Coef->c != NAN && !isfinite(Coef->c)){
+			return 1;
+		}
+	return 0;
+}
+
