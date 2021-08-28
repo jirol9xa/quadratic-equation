@@ -3,6 +3,7 @@
 
 void input(struct Coefficients* Coef) {
 	assert(Coef != NULL);
+	assert(check_Coef(Coef));
 	printf("Now enter the values a, b, c \n");
 	do{
 		printf("enter a \n");
@@ -43,6 +44,7 @@ void wrong_input() {
 
 void solve_equation(struct Answers* ans, struct Coefficients* Coef) {
 	assert(Coef != NULL);
+	assert(check_Coef(Coef));
 	assert(ans != NULL);
 	if (fabs(Coef->a) < zero) {
 		linear_equation(ans, Coef);
@@ -55,6 +57,7 @@ void solve_equation(struct Answers* ans, struct Coefficients* Coef) {
 
 void linear_equation(struct Answers* ans, struct Coefficients* Coef) {
 	assert(Coef != NULL);
+	assert(check_Coef(Coef));
 	assert(ans != NULL);
 	if (fabs((*Coef).b) < zero) {
 		if (fabs((*Coef).c) < zero) {
@@ -73,6 +76,7 @@ void linear_equation(struct Answers* ans, struct Coefficients* Coef) {
 
 void the_quadratic_equation(struct Answers* ans, struct Coefficients* Coef) {
 	assert(Coef != NULL);
+	assert(check_Coef(Coef));
 	assert(ans != NULL);
 	double diskr = Coef->b * Coef->b - 4 * Coef->a * Coef->c;
 	if (diskr < 0) {
