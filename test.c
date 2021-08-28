@@ -5,10 +5,10 @@ int UnitTestSolution(void){
     int ind = 1;
     TEST test[6];
     for (int i = 0; i < 6; i++){
-        test[i].Ans = {ZERO, {NAN,NAN}};
-        test[i].Coef = {1};
+        test[i].Ans = {};
+        test[i].Coef = {};
     }
-    input_s(&test);
+    input_s(test);
     for (int i = 0; i < 6; i++){
         struct Answers ans1 = {ZERO, {NAN, NAN}};
         if (!compair(&(test[i]), &ans1)){
@@ -34,40 +34,41 @@ int UnitTestSolution(void){
     return ind;   
 }
 
-void input_s(TEST (*test)[6]){
+void input_s(TEST test[]){
     assert(test);
-    (*test)[0].Coef = {0};
-    (*test)[0].Ans.amount = INFINIT;
+
+    test[0].Coef         = {};
+    test[0].Ans.amount   = INFINIT;
     
-    (*test)[1].Coef.a = 0;
-    (*test)[1].Coef.b = 0;
-    (*test)[1].Coef.c = 1;
-    (*test)[1].Ans.amount = ZERO;
+    test[1].Coef.a       = 0;
+    test[1].Coef.b       = 0;
+    test[1].Coef.c       = 1;
+    test[1].Ans.amount   = ZERO;
 
-    (*test)[2].Coef.a = 0;
-    (*test)[2].Coef.b = 8;
-    (*test)[2].Coef.c = 4;
-    (*test)[2].Ans.amount = ONE;
-    (*test)[2].Ans.roots[0] = -0.5;
+    test[2].Coef.a       = 0;
+    test[2].Coef.b       = 8;
+    test[2].Coef.c       = 4;
+    test[2].Ans.amount   = ONE;
+    test[2].Ans.roots[0] = -0.5;
 
-    (*test)[3].Coef.a = 25;
-    (*test)[3].Coef.b = 0;
-    (*test)[3].Coef.c = 1;
-    (*test)[3].Ans.amount = ZERO;
+    test[3].Coef.a       = 25;
+    test[3].Coef.b       = 0;
+    test[3].Coef.c       = 1;
+    test[3].Ans.amount   = ZERO;
 
-    (*test)[4].Coef.a = 25;
-    (*test)[4].Coef.b = 0;
-    (*test)[4].Coef.c = -1;
-    (*test)[4].Ans.amount = TWO;
-    (*test)[4].Ans.roots[0] = -0.2;
-    (*test)[4].Ans.roots[1] = 0.2;
+    test[4].Coef.a       = 25;
+    test[4].Coef.b       = 0;
+    test[4].Coef.c       = -1;
+    test[4].Ans.amount   = TWO;
+    test[4].Ans.roots[0] = -0.2;
+    test[4].Ans.roots[1] = 0.2;
 
-    (*test)[5].Coef.a = 25;
-    (*test)[5].Coef.b = 5;
-    (*test)[5].Coef.c = 0;
-    (*test)[5].Ans.amount = TWO;
-    (*test)[5].Ans.roots[0] = -0.2;
-    (*test)[5].Ans.roots[1] = 0;
+    test[5].Coef.a       = 25;
+    test[5].Coef.b       = 5;
+    test[5].Coef.c       = 0;
+    test[5].Ans.amount   = TWO;
+    test[5].Ans.roots[0] = -0.2;
+    test[5].Ans.roots[1] = 0;
 
 }
 

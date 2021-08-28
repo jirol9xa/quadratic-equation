@@ -1,13 +1,14 @@
 var indexSectionsWithContent =
 {
-  0: "abceilmoprstuwz",
+  0: "abceilmoprstuwzÐ",
   1: "act",
-  2: "mst",
+  2: "mrst",
   3: "ceilmpstuw",
   4: "abcrz",
   5: "t",
   6: "a",
-  7: "iotz"
+  7: "iotz",
+  8: "Ð"
 };
 
 var indexSectionNames =
@@ -19,7 +20,8 @@ var indexSectionNames =
   4: "variables",
   5: "typedefs",
   6: "enums",
-  7: "enumvalues"
+  7: "enumvalues",
+  8: "pages"
 };
 
 var indexSectionLabels =
@@ -31,6 +33,7 @@ var indexSectionLabels =
   4: "Переменные",
   5: "Определения типов",
   6: "Перечисления",
-  7: "Элементы перечислений"
+  7: "Элементы перечислений",
+  8: "Страницы"
 };
 

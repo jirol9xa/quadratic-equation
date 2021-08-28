@@ -126,7 +126,17 @@ $(function() {
 
 <p>Функция проверяющая коэффициента </p>
 <p>Функция, которая проверяет не равны ли коэффициенты NAN или infinity </p>
-
+<div class="fragment"><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                                          {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">if</span> (!isinf(Coef-&gt;<a class="code" href="struct_coefficients.html#a65e5bf727bb68e304b280a0d74db7622">a</a>) &amp;&amp; !isnan(Coef-&gt;<a class="code" href="struct_coefficients.html#a65e5bf727bb68e304b280a0d74db7622">a</a>) &amp;&amp;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        !isinf(Coef-&gt;<a class="code" href="struct_coefficients.html#ac8453ba82f253f66045a84645d001c37">b</a>) &amp;&amp; !isnan(Coef-&gt;<a class="code" href="struct_coefficients.html#ac8453ba82f253f66045a84645d001c37">b</a>) &amp;&amp;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        !isinf(Coef-&gt;<a class="code" href="struct_coefficients.html#a3a8a6e5cc52fbaa075ef61983d441eed">c</a>) &amp;&amp; !isnan(Coef-&gt;<a class="code" href="struct_coefficients.html#a3a8a6e5cc52fbaa075ef61983d441eed">c</a>)){</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4a444f3cac3d74fbf555e1bb2a28f06d"></a>
@@ -146,7 +156,12 @@ $(function() {
 
 <p>Функция очищения ввода </p>
 <p>При неверном формате ввода коэффициентов данная функция очищает входные данные, чтобы scanf() могла обработать следующую попытку ввода </p>
-
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;               {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">while</span> (getchar() != <span class="charliteral">&#39;\n&#39;</span>) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3a73fa202e2b7b11d736f6d525070e69"></a>
@@ -174,7 +189,32 @@ $(function() {
 </dl>
 <p>Функция записывает в уже созданную структуру значения a,b и с <br  />
  </p>
-
+<div class="fragment"><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                      {</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    assert(Coef != NULL);</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    printf(<span class="stringliteral">&quot;Now enter the values a, b, c \n&quot;</span>);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordflow">do</span>{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        printf(<span class="stringliteral">&quot;enter a \n&quot;</span>);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordflow">while</span>(scanf(<span class="stringliteral">&quot;%lf&quot;</span>, &amp;(Coef-&gt;<a class="code" href="struct_coefficients.html#a65e5bf727bb68e304b280a0d74db7622">a</a>)) !=1){</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            <a class="code" href="solution_8c.html#a08bb5542e39378159307e75169a9df73">wrong_input</a>();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            <a class="code" href="solution_8c.html#a4a444f3cac3d74fbf555e1bb2a28f06d">eatline</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        }</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="solution_8c.html#a4a444f3cac3d74fbf555e1bb2a28f06d">eatline</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        printf(<span class="stringliteral">&quot;enter b \n&quot;</span>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordflow">while</span>(scanf(<span class="stringliteral">&quot;%lf&quot;</span>, &amp;(Coef-&gt;<a class="code" href="struct_coefficients.html#ac8453ba82f253f66045a84645d001c37">b</a>)) !=1){</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <a class="code" href="solution_8c.html#a08bb5542e39378159307e75169a9df73">wrong_input</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <a class="code" href="solution_8c.html#a4a444f3cac3d74fbf555e1bb2a28f06d">eatline</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="solution_8c.html#a4a444f3cac3d74fbf555e1bb2a28f06d">eatline</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        printf(<span class="stringliteral">&quot;enter c \n&quot;</span>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">while</span>(scanf(<span class="stringliteral">&quot;%lf&quot;</span>, &amp;(Coef-&gt;<a class="code" href="struct_coefficients.html#a3a8a6e5cc52fbaa075ef61983d441eed">c</a>)) !=1){</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <a class="code" href="solution_8c.html#a08bb5542e39378159307e75169a9df73">wrong_input</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <a class="code" href="solution_8c.html#a4a444f3cac3d74fbf555e1bb2a28f06d">eatline</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        printf(<span class="stringliteral">&quot;We&#39;re checking the coefficients for admissibility \n&quot;</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">while</span>(!<a class="code" href="solution_8c.html#a30d57371ed898919fdb5dc7e1c75885f">check_Coef</a>(Coef));</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a691251a85d291870cde16e5fea2fae1f"></a>
@@ -203,7 +243,15 @@ $(function() {
       </table>
 </div><div class="memdoc">
 <p>Функция, проверяющая числа double на равенство </p>
-
+<div class="fragment"><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                                 {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">if</span> (fabs(<a class="code" href="struct_coefficients.html#a65e5bf727bb68e304b280a0d74db7622">a</a> - <a class="code" href="struct_coefficients.html#ac8453ba82f253f66045a84645d001c37">b</a>) &lt; <a class="code" href="_title_8h.html#a554f7b66b1ba49443447eb746978c268">zero</a>){</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8cb3515b523dac7fd1f9104e840558bb"></a>
@@ -241,7 +289,24 @@ $(function() {
   </dd>
 </dl>
 <p>Данная функция вызывается функцией <a class="el" href="_title_8h.html#abde6b1c57ec7999659dae12b3c22381a" title="Функция, управляющая решением уравнения">solve_equation()</a> в случае, если а = 0 (то есть уравнение является линейным) </p>
-
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                                                     {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    assert(Coef != NULL);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    assert(<a class="code" href="solution_8c.html#a30d57371ed898919fdb5dc7e1c75885f">check_Coef</a>(Coef));</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    assert(ans != NULL);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="solution_8c.html#a691251a85d291870cde16e5fea2fae1f">iseallity</a>(0, Coef-&gt;<a class="code" href="struct_coefficients.html#ac8453ba82f253f66045a84645d001c37">b</a>)) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="solution_8c.html#a691251a85d291870cde16e5fea2fae1f">iseallity</a>(0, Coef-&gt;<a class="code" href="struct_coefficients.html#a3a8a6e5cc52fbaa075ef61983d441eed">c</a>)) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            (*ans).amount = <a class="code" href="_title_8h.html#a205e037d08a5161254a1965cb7c03b9dac4ed77dc1583aaa27653604f06f49176">INFINIT</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            (*ans).amount = <a class="code" href="_title_8h.html#a205e037d08a5161254a1965cb7c03b9dae117e3533122c80b262257b49b21cddf">ZERO</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        (*ans).amount = <a class="code" href="_title_8h.html#a205e037d08a5161254a1965cb7c03b9da7a725f13af144bdef532d0389ba75e0d">ONE</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        (*ans).roots[0] = -(*Coef).c / (*Coef).b;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae83fcdbeb2b6757fc741ae953b633ee1"></a>
@@ -262,7 +327,26 @@ $(function() {
 
 <p>Функция главного меню </p>
 <p>Функция спрашивает у пользователя, хочет ли он решить новое уравнение или проверить программу на экстремальных значениях </p>
-
+<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;          {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    printf(<span class="stringliteral">&quot;Do you want to solve your equation or check the boundary values? \n&quot;</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    printf(<span class="stringliteral">&quot;a) Solve       b)Check \n&quot;</span>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">char</span> ch;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    scanf(<span class="stringliteral">&quot;%c&quot;</span>, &amp;ch);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">while</span> (!strchr(<span class="stringliteral">&quot;ab&quot;</span>, ch)){</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        printf(<span class="stringliteral">&quot;Just enter \&quot;a\&quot; or \&quot;b\&quot; &quot;</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="code" href="solution_8c.html#a4a444f3cac3d74fbf555e1bb2a28f06d">eatline</a>();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        scanf(<span class="stringliteral">&quot;%c&quot;</span>, &amp;ch);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="solution_8c.html#a4a444f3cac3d74fbf555e1bb2a28f06d">eatline</a>();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">if</span>  (ch == <span class="charliteral">&#39;a&#39;</span>){</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6f0b0ef842999aa0fca0180aa6e7c6cd"></a>
@@ -289,7 +373,24 @@ $(function() {
   </dd>
 </dl>
 <p>Данная функция выводит члены структуры <a class="el" href="struct_answers.html" title="Структура для хранения ответов">Answers</a>, а именно количество корней и их значения (если они существуют). </p>
-
+<div class="fragment"><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                                        {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    assert(ans != NULL);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">switch</span> (ans-&gt;<a class="code" href="struct_answers.html#a55636e96e38928c8143ab3dec4c46f8a">amount</a>) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_title_8h.html#a205e037d08a5161254a1965cb7c03b9dae117e3533122c80b262257b49b21cddf">ZERO</a>:</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        printf(<span class="stringliteral">&quot;The equation has no solutions \n&quot;</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_title_8h.html#a205e037d08a5161254a1965cb7c03b9da7a725f13af144bdef532d0389ba75e0d">ONE</a>:</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        printf(<span class="stringliteral">&quot;The equation has one solution x = %lg \n&quot;</span>, ans-&gt;<a class="code" href="struct_answers.html#a086a79ca8485d1651289c661b0225418">roots</a>[0]);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_title_8h.html#a205e037d08a5161254a1965cb7c03b9da0e793500a63ffa575b9b712ca3bc9851">TWO</a>:</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        printf(<span class="stringliteral">&quot;The equation has one solution x1 = % lg   x2 = %lg \n&quot;</span>, ans-&gt;<a class="code" href="struct_answers.html#a086a79ca8485d1651289c661b0225418">roots</a>[0], ans-&gt;<a class="code" href="struct_answers.html#a086a79ca8485d1651289c661b0225418">roots</a>[1]);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        printf(<span class="stringliteral">&quot;The equation has an infinite number of solutions \n&quot;</span>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abde6b1c57ec7999659dae12b3c22381a"></a>
@@ -327,7 +428,18 @@ $(function() {
   </dd>
 </dl>
 <p>Данная функция вызывает функцию <a class="el" href="_title_8h.html#a8cb3515b523dac7fd1f9104e840558bb" title="Функция для решения линейного уравнения">linear_equation()</a>, если уравнение является линейным (а = 0) и вызывает функцию the_quadratic_equation в противном случае. </p>
-
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                                                    {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    assert(Coef != NULL);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    assert(<a class="code" href="solution_8c.html#a30d57371ed898919fdb5dc7e1c75885f">check_Coef</a>(Coef));</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    assert(ans != NULL);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="solution_8c.html#a691251a85d291870cde16e5fea2fae1f">iseallity</a>(0, Coef-&gt;<a class="code" href="struct_coefficients.html#a65e5bf727bb68e304b280a0d74db7622">a</a>)) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="solution_8c.html#a8cb3515b523dac7fd1f9104e840558bb">linear_equation</a>(ans, Coef);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="solution_8c.html#af428fc888cc653bceff8ef36e8c2d710">the_quadratic_equation</a>(ans, Coef);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af428fc888cc653bceff8ef36e8c2d710"></a>
@@ -365,7 +477,26 @@ $(function() {
   </dd>
 </dl>
 <p>Данная функция вызывается функцией <a class="el" href="_title_8h.html#abde6b1c57ec7999659dae12b3c22381a" title="Функция, управляющая решением уравнения">solve_equation()</a> в случае, если а != 0 (то есть уравнение является квадратным). Решение происходит через дискриминант. </p>
-
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                                                                            {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    assert(Coef != NULL);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    assert(<a class="code" href="solution_8c.html#a30d57371ed898919fdb5dc7e1c75885f">check_Coef</a>(Coef));</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    assert(ans != NULL);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">double</span> diskr = Coef-&gt;<a class="code" href="struct_coefficients.html#ac8453ba82f253f66045a84645d001c37">b</a> * Coef-&gt;<a class="code" href="struct_coefficients.html#ac8453ba82f253f66045a84645d001c37">b</a> - 4 * Coef-&gt;<a class="code" href="struct_coefficients.html#a65e5bf727bb68e304b280a0d74db7622">a</a> * Coef-&gt;<a class="code" href="struct_coefficients.html#a3a8a6e5cc52fbaa075ef61983d441eed">c</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span> (diskr &lt; 0) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        ans-&gt;<a class="code" href="struct_answers.html#a55636e96e38928c8143ab3dec4c46f8a">amount</a> = <a class="code" href="_title_8h.html#a205e037d08a5161254a1965cb7c03b9dae117e3533122c80b262257b49b21cddf">ZERO</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="solution_8c.html#a691251a85d291870cde16e5fea2fae1f">iseallity</a>(diskr, 0)) {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            ans-&gt;<a class="code" href="struct_answers.html#a55636e96e38928c8143ab3dec4c46f8a">amount</a> = <a class="code" href="_title_8h.html#a205e037d08a5161254a1965cb7c03b9da7a725f13af144bdef532d0389ba75e0d">ONE</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            ans-&gt;<a class="code" href="struct_answers.html#a086a79ca8485d1651289c661b0225418">roots</a>[0] = -(Coef-&gt;<a class="code" href="struct_coefficients.html#ac8453ba82f253f66045a84645d001c37">b</a>) / (2 * (Coef-&gt;<a class="code" href="struct_coefficients.html#a65e5bf727bb68e304b280a0d74db7622">a</a>));</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            ans-&gt;<a class="code" href="struct_answers.html#a55636e96e38928c8143ab3dec4c46f8a">amount</a> = <a class="code" href="_title_8h.html#a205e037d08a5161254a1965cb7c03b9da0e793500a63ffa575b9b712ca3bc9851">TWO</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            ans-&gt;<a class="code" href="struct_answers.html#a086a79ca8485d1651289c661b0225418">roots</a>[0] = (-(Coef-&gt;<a class="code" href="struct_coefficients.html#ac8453ba82f253f66045a84645d001c37">b</a>) - sqrt(diskr)) / (2 * (Coef-&gt;<a class="code" href="struct_coefficients.html#a65e5bf727bb68e304b280a0d74db7622">a</a>));</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            ans-&gt;<a class="code" href="struct_answers.html#a086a79ca8485d1651289c661b0225418">roots</a>[1] = (-(Coef-&gt;<a class="code" href="struct_coefficients.html#ac8453ba82f253f66045a84645d001c37">b</a>) + sqrt(diskr)) / (2 * (Coef-&gt;<a class="code" href="struct_coefficients.html#a65e5bf727bb68e304b280a0d74db7622">a</a>));</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a08bb5542e39378159307e75169a9df73"></a>
@@ -385,10 +516,29 @@ $(function() {
 
 <p>Функция повторного ввода </p>
 <p>При неверном формате ввода коэффициентов данная функция запрашивает у пользователя повторный ввод данных, выводя перед этим сообщение "Just enter a number". Используется совместно с <a class="el" href="_title_8h.html#a4a444f3cac3d74fbf555e1bb2a28f06d" title="Функция очищения ввода">eatline()</a> </p>
-
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                   {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    printf(<span class="stringliteral">&quot;Just enter a number \n&quot;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="asolution_8c_html_a30d57371ed898919fdb5dc7e1c75885f"><div class="ttname"><a href="solution_8c.html#a30d57371ed898919fdb5dc7e1c75885f">check_Coef</a></div><div class="ttdeci">int check_Coef(struct Coefficients *Coef)</div><div class="ttdoc">Функция проверяющая коэффициента</div><div class="ttdef"><b>Definition:</b> solution.c:135</div></div>
+<div class="ttc" id="a_title_8h_html_a554f7b66b1ba49443447eb746978c268"><div class="ttname"><a href="_title_8h.html#a554f7b66b1ba49443447eb746978c268">zero</a></div><div class="ttdeci">const double zero</div><div class="ttdef"><b>Definition:</b> Title.h:160</div></div>
+<div class="ttc" id="asolution_8c_html_a4a444f3cac3d74fbf555e1bb2a28f06d"><div class="ttname"><a href="solution_8c.html#a4a444f3cac3d74fbf555e1bb2a28f06d">eatline</a></div><div class="ttdeci">void eatline()</div><div class="ttdoc">Функция очищения ввода</div><div class="ttdef"><b>Definition:</b> solution.c:31</div></div>
+<div class="ttc" id="a_title_8h_html_a205e037d08a5161254a1965cb7c03b9dae117e3533122c80b262257b49b21cddf"><div class="ttname"><a href="_title_8h.html#a205e037d08a5161254a1965cb7c03b9dae117e3533122c80b262257b49b21cddf">ZERO</a></div><div class="ttdeci">@ ZERO</div><div class="ttdef"><b>Definition:</b> Title.h:6</div></div>
+<div class="ttc" id="astruct_coefficients_html_a3a8a6e5cc52fbaa075ef61983d441eed"><div class="ttname"><a href="struct_coefficients.html#a3a8a6e5cc52fbaa075ef61983d441eed">Coefficients::c</a></div><div class="ttdeci">double c</div><div class="ttdef"><b>Definition:</b> Title.h:29</div></div>
+<div class="ttc" id="astruct_coefficients_html_a65e5bf727bb68e304b280a0d74db7622"><div class="ttname"><a href="struct_coefficients.html#a65e5bf727bb68e304b280a0d74db7622">Coefficients::a</a></div><div class="ttdeci">double a</div><div class="ttdef"><b>Definition:</b> Title.h:27</div></div>
+<div class="ttc" id="a_title_8h_html_a205e037d08a5161254a1965cb7c03b9dac4ed77dc1583aaa27653604f06f49176"><div class="ttname"><a href="_title_8h.html#a205e037d08a5161254a1965cb7c03b9dac4ed77dc1583aaa27653604f06f49176">INFINIT</a></div><div class="ttdeci">@ INFINIT</div><div class="ttdef"><b>Definition:</b> Title.h:6</div></div>
+<div class="ttc" id="asolution_8c_html_a8cb3515b523dac7fd1f9104e840558bb"><div class="ttname"><a href="solution_8c.html#a8cb3515b523dac7fd1f9104e840558bb">linear_equation</a></div><div class="ttdeci">void linear_equation(struct Answers *ans, struct Coefficients *Coef)</div><div class="ttdoc">Функция для решения линейного уравнения</div><div class="ttdef"><b>Definition:</b> solution.c:56</div></div>
+<div class="ttc" id="a_title_8h_html_a205e037d08a5161254a1965cb7c03b9da7a725f13af144bdef532d0389ba75e0d"><div class="ttname"><a href="_title_8h.html#a205e037d08a5161254a1965cb7c03b9da7a725f13af144bdef532d0389ba75e0d">ONE</a></div><div class="ttdeci">@ ONE</div><div class="ttdef"><b>Definition:</b> Title.h:6</div></div>
+<div class="ttc" id="asolution_8c_html_a08bb5542e39378159307e75169a9df73"><div class="ttname"><a href="solution_8c.html#a08bb5542e39378159307e75169a9df73">wrong_input</a></div><div class="ttdeci">void wrong_input()</div><div class="ttdoc">Функция повторного ввода</div><div class="ttdef"><b>Definition:</b> solution.c:38</div></div>
+<div class="ttc" id="a_title_8h_html_a205e037d08a5161254a1965cb7c03b9da0e793500a63ffa575b9b712ca3bc9851"><div class="ttname"><a href="_title_8h.html#a205e037d08a5161254a1965cb7c03b9da0e793500a63ffa575b9b712ca3bc9851">TWO</a></div><div class="ttdeci">@ TWO</div><div class="ttdef"><b>Definition:</b> Title.h:6</div></div>
+<div class="ttc" id="astruct_answers_html_a55636e96e38928c8143ab3dec4c46f8a"><div class="ttname"><a href="struct_answers.html#a55636e96e38928c8143ab3dec4c46f8a">Answers::amount</a></div><div class="ttdeci">enum Amount amount</div><div class="ttdef"><b>Definition:</b> Title.h:17</div></div>
+<div class="ttc" id="astruct_answers_html_a086a79ca8485d1651289c661b0225418"><div class="ttname"><a href="struct_answers.html#a086a79ca8485d1651289c661b0225418">Answers::roots</a></div><div class="ttdeci">double roots[2]</div><div class="ttdef"><b>Definition:</b> Title.h:18</div></div>
+<div class="ttc" id="astruct_coefficients_html_ac8453ba82f253f66045a84645d001c37"><div class="ttname"><a href="struct_coefficients.html#ac8453ba82f253f66045a84645d001c37">Coefficients::b</a></div><div class="ttdeci">double b</div><div class="ttdef"><b>Definition:</b> Title.h:28</div></div>
+<div class="ttc" id="asolution_8c_html_a691251a85d291870cde16e5fea2fae1f"><div class="ttname"><a href="solution_8c.html#a691251a85d291870cde16e5fea2fae1f">iseallity</a></div><div class="ttdeci">int iseallity(double a, double b)</div><div class="ttdef"><b>Definition:</b> solution.c:146</div></div>
+<div class="ttc" id="asolution_8c_html_af428fc888cc653bceff8ef36e8c2d710"><div class="ttname"><a href="solution_8c.html#af428fc888cc653bceff8ef36e8c2d710">the_quadratic_equation</a></div><div class="ttdeci">void the_quadratic_equation(struct Answers *ans, struct Coefficients *Coef)</div><div class="ttdoc">Функция решения через дpискриминант</div><div class="ttdef"><b>Definition:</b> solution.c:75</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Создано системой &#160;<a href="http://www.doxygen.org/index.html">

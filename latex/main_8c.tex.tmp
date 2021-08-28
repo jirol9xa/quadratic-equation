@@ -17,3 +17,28 @@ int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4                \{}
+\DoxyCodeLine{5     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_answers}{Answers}} ans = \{ \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9dae117e3533122c80b262257b49b21cddf}{ZERO}},}
+\DoxyCodeLine{6                           \{0, 0\} \}; \textcolor{comment}{// первый элемент является числом решений}}
+\DoxyCodeLine{7     \textcolor{comment}{// второй и третьий равны значениям х, если они существуют}}
+\DoxyCodeLine{8     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_coefficients}{Coefficients}} Coef = \{ 0, 0, 0 \};}
+\DoxyCodeLine{9     printf(\textcolor{stringliteral}{"Hi! This program solves quadratic equations a*x\string^2 + b*x + c = 0 \(\backslash\)n"});}
+\DoxyCodeLine{10     \textcolor{keywordflow}{if} (\mbox{\hyperlink{solution_8c_ae83fcdbeb2b6757fc741ae953b633ee1}{menu}}())\{}
+\DoxyCodeLine{11         \mbox{\hyperlink{solution_8c_a3a73fa202e2b7b11d736f6d525070e69}{input}}(\&Coef);}
+\DoxyCodeLine{12         printf(\textcolor{stringliteral}{"Quadratic equation: \%lg*x\string^2 + \%lg*x + \%lg = 0 \(\backslash\)n"}, Coef.\mbox{\hyperlink{struct_coefficients_a65e5bf727bb68e304b280a0d74db7622}{a}}, Coef.\mbox{\hyperlink{struct_coefficients_ac8453ba82f253f66045a84645d001c37}{b}}, Coef.\mbox{\hyperlink{struct_coefficients_a3a8a6e5cc52fbaa075ef61983d441eed}{c}});}
+\DoxyCodeLine{13         \mbox{\hyperlink{solution_8c_abde6b1c57ec7999659dae12b3c22381a}{solve\_equation}}(\&ans, \&Coef);}
+\DoxyCodeLine{14         \mbox{\hyperlink{solution_8c_a6f0b0ef842999aa0fca0180aa6e7c6cd}{print\_answers}}(\&ans);}
+\DoxyCodeLine{15         printf(\textcolor{stringliteral}{"The equation is solved :) \(\backslash\)n"});}
+\DoxyCodeLine{16     \}}
+\DoxyCodeLine{17     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{18         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{test_8c_aa708dbd706e927541a11028c0741e078}{UnitTestSolution}}())\{}
+\DoxyCodeLine{19             printf(\textcolor{stringliteral}{"Checking failed \(\backslash\)n"});}
+\DoxyCodeLine{20         \}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \}}
+\DoxyCodeLine{23     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}

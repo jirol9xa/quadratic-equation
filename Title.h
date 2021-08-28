@@ -1,9 +1,16 @@
 #include <stdio.h> 
 #include <math.h>
 #include <assert.h>
+#include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 
-enum Amount {ZERO, ONE, TWO, INFINIT};
+enum Amount {
+	ZERO,
+ 	ONE, 
+	TWO, 
+	INFINIT
+};
 
 
 
@@ -125,7 +132,7 @@ int UnitTestSolution(void);
 	\param test Массив структур, хранящих в себе данные о тестах
 */
 
-void input_s(TEST (*test)[6]); //Функция, обрабатывающая ввод теста
+void input_s(TEST test[]); //Функция, обрабатывающая ввод теста
 
 /*!
 	\brief Функция сравнения ответов
@@ -150,6 +157,12 @@ int menu(void);
 */
 int check_Coef(struct Coefficients * Coef);
 
+/*!
+	\brief Функция проверки ответов
+
+	Функция, которая проверяет не равны ли элементы структура Answers Nan или infinitys
+*/
+int check_Ans(struct Answers * ans);
 
 /*!
 	Функция, проверяющая числа double на равенство

@@ -39,7 +39,21 @@ int \mbox{\hyperlink{solution_8c_a691251a85d291870cde16e5fea2fae1f}{iseallity}} 
 
 Функция проверяющая коэффициента 
 
-Функция, которая проверяет не равны ли коэффициенты N\+AN или infinity \mbox{\Hypertarget{solution_8c_a4a444f3cac3d74fbf555e1bb2a28f06d}\label{solution_8c_a4a444f3cac3d74fbf555e1bb2a28f06d}} 
+Функция, которая проверяет не равны ли коэффициенты N\+AN или infinity 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{135                                           \{}
+\DoxyCodeLine{136     \textcolor{keywordflow}{if} (!isinf(Coef-\/>\mbox{\hyperlink{struct_coefficients_a65e5bf727bb68e304b280a0d74db7622}{a}}) \&\& !isnan(Coef-\/>\mbox{\hyperlink{struct_coefficients_a65e5bf727bb68e304b280a0d74db7622}{a}}) \&\&}
+\DoxyCodeLine{137         !isinf(Coef-\/>\mbox{\hyperlink{struct_coefficients_ac8453ba82f253f66045a84645d001c37}{b}}) \&\& !isnan(Coef-\/>\mbox{\hyperlink{struct_coefficients_ac8453ba82f253f66045a84645d001c37}{b}}) \&\&}
+\DoxyCodeLine{138         !isinf(Coef-\/>\mbox{\hyperlink{struct_coefficients_a3a8a6e5cc52fbaa075ef61983d441eed}{c}}) \&\& !isnan(Coef-\/>\mbox{\hyperlink{struct_coefficients_a3a8a6e5cc52fbaa075ef61983d441eed}{c}}))\{}
+\DoxyCodeLine{139             \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{140         \}}
+\DoxyCodeLine{141     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{142         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{143     \}}
+\DoxyCodeLine{144 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{solution_8c_a4a444f3cac3d74fbf555e1bb2a28f06d}\label{solution_8c_a4a444f3cac3d74fbf555e1bb2a28f06d}} 
 \index{solution.c@{solution.c}!eatline@{eatline}}
 \index{eatline@{eatline}!solution.c@{solution.c}}
 \doxysubsubsection{\texorpdfstring{eatline()}{eatline()}}
@@ -49,7 +63,16 @@ int \mbox{\hyperlink{solution_8c_a691251a85d291870cde16e5fea2fae1f}{iseallity}} 
 
 Функция очищения ввода 
 
-При неверном формате ввода коэффициентов данная функция очищает входные данные, чтобы scanf() могла обработать следующую попытку ввода \mbox{\Hypertarget{solution_8c_a3a73fa202e2b7b11d736f6d525070e69}\label{solution_8c_a3a73fa202e2b7b11d736f6d525070e69}} 
+При неверном формате ввода коэффициентов данная функция очищает входные данные, чтобы scanf() могла обработать следующую попытку ввода 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                \{}
+\DoxyCodeLine{32     \textcolor{keywordflow}{while} (getchar() != \textcolor{charliteral}{'\(\backslash\)n'}) \{}
+\DoxyCodeLine{33         \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{solution_8c_a3a73fa202e2b7b11d736f6d525070e69}\label{solution_8c_a3a73fa202e2b7b11d736f6d525070e69}} 
 \index{solution.c@{solution.c}!input@{input}}
 \index{input@{input}!solution.c@{solution.c}}
 \doxysubsubsection{\texorpdfstring{input()}{input()}}
@@ -65,13 +88,54 @@ int \mbox{\hyperlink{solution_8c_a691251a85d291870cde16e5fea2fae1f}{iseallity}} 
 \hline
 \end{DoxyParams}
 Функция записывает в уже созданную структуру значения a,b и с ~\newline
- \mbox{\Hypertarget{solution_8c_a691251a85d291870cde16e5fea2fae1f}\label{solution_8c_a691251a85d291870cde16e5fea2fae1f}} 
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4                                       \{}
+\DoxyCodeLine{5     assert(Coef != NULL);}
+\DoxyCodeLine{6     printf(\textcolor{stringliteral}{"Now enter the values a, b, c \(\backslash\)n"});}
+\DoxyCodeLine{7     \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{8         printf(\textcolor{stringliteral}{"enter a \(\backslash\)n"});}
+\DoxyCodeLine{9         \textcolor{keywordflow}{while}(scanf(\textcolor{stringliteral}{"\%lf"}, \&(Coef-\/>\mbox{\hyperlink{struct_coefficients_a65e5bf727bb68e304b280a0d74db7622}{a}})) !=1)\{}
+\DoxyCodeLine{10             \mbox{\hyperlink{solution_8c_a08bb5542e39378159307e75169a9df73}{wrong\_input}}();}
+\DoxyCodeLine{11             \mbox{\hyperlink{solution_8c_a4a444f3cac3d74fbf555e1bb2a28f06d}{eatline}}();}
+\DoxyCodeLine{12         \}}
+\DoxyCodeLine{13         \mbox{\hyperlink{solution_8c_a4a444f3cac3d74fbf555e1bb2a28f06d}{eatline}}();}
+\DoxyCodeLine{14         printf(\textcolor{stringliteral}{"enter b \(\backslash\)n"});}
+\DoxyCodeLine{15         \textcolor{keywordflow}{while}(scanf(\textcolor{stringliteral}{"\%lf"}, \&(Coef-\/>\mbox{\hyperlink{struct_coefficients_ac8453ba82f253f66045a84645d001c37}{b}})) !=1)\{}
+\DoxyCodeLine{16             \mbox{\hyperlink{solution_8c_a08bb5542e39378159307e75169a9df73}{wrong\_input}}();}
+\DoxyCodeLine{17             \mbox{\hyperlink{solution_8c_a4a444f3cac3d74fbf555e1bb2a28f06d}{eatline}}();}
+\DoxyCodeLine{18         \}}
+\DoxyCodeLine{19         \mbox{\hyperlink{solution_8c_a4a444f3cac3d74fbf555e1bb2a28f06d}{eatline}}();}
+\DoxyCodeLine{20         printf(\textcolor{stringliteral}{"enter c \(\backslash\)n"});}
+\DoxyCodeLine{21         \textcolor{keywordflow}{while}(scanf(\textcolor{stringliteral}{"\%lf"}, \&(Coef-\/>\mbox{\hyperlink{struct_coefficients_a3a8a6e5cc52fbaa075ef61983d441eed}{c}})) !=1)\{}
+\DoxyCodeLine{22             \mbox{\hyperlink{solution_8c_a08bb5542e39378159307e75169a9df73}{wrong\_input}}();}
+\DoxyCodeLine{23             \mbox{\hyperlink{solution_8c_a4a444f3cac3d74fbf555e1bb2a28f06d}{eatline}}();}
+\DoxyCodeLine{24         \}}
+\DoxyCodeLine{25         printf(\textcolor{stringliteral}{"We're checking the coefficients for admissibility \(\backslash\)n"});}
+\DoxyCodeLine{26     \}}
+\DoxyCodeLine{27     \textcolor{keywordflow}{while}(!\mbox{\hyperlink{solution_8c_a30d57371ed898919fdb5dc7e1c75885f}{check\_Coef}}(Coef));}
+\DoxyCodeLine{28 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{solution_8c_a691251a85d291870cde16e5fea2fae1f}\label{solution_8c_a691251a85d291870cde16e5fea2fae1f}} 
 \index{solution.c@{solution.c}!iseallity@{iseallity}}
 \index{iseallity@{iseallity}!solution.c@{solution.c}}
 \doxysubsubsection{\texorpdfstring{iseallity()}{iseallity()}}
 {\footnotesize\ttfamily int iseallity (\begin{DoxyParamCaption}\item[{double}]{,  }\item[{double}]{ }\end{DoxyParamCaption})}
 
-Функция, проверяющая числа double на равенство \mbox{\Hypertarget{solution_8c_a8cb3515b523dac7fd1f9104e840558bb}\label{solution_8c_a8cb3515b523dac7fd1f9104e840558bb}} 
+Функция, проверяющая числа double на равенство 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{146                                  \{}
+\DoxyCodeLine{147     \textcolor{keywordflow}{if} (fabs(\mbox{\hyperlink{struct_coefficients_a65e5bf727bb68e304b280a0d74db7622}{a}} -\/ \mbox{\hyperlink{struct_coefficients_ac8453ba82f253f66045a84645d001c37}{b}}) < \mbox{\hyperlink{_title_8h_a554f7b66b1ba49443447eb746978c268}{zero}})\{}
+\DoxyCodeLine{148         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{149     \}}
+\DoxyCodeLine{150     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{151         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{152     \}}
+\DoxyCodeLine{153 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{solution_8c_a8cb3515b523dac7fd1f9104e840558bb}\label{solution_8c_a8cb3515b523dac7fd1f9104e840558bb}} 
 \index{solution.c@{solution.c}!linear\_equation@{linear\_equation}}
 \index{linear\_equation@{linear\_equation}!solution.c@{solution.c}}
 \doxysubsubsection{\texorpdfstring{linear\_equation()}{linear\_equation()}}
@@ -88,7 +152,28 @@ int \mbox{\hyperlink{solution_8c_a691251a85d291870cde16e5fea2fae1f}{iseallity}} 
 {\em Coef} & Структура для хранения коэффициентов уравнения\\
 \hline
 \end{DoxyParams}
-Данная функция вызывается функцией \mbox{\hyperlink{_title_8h_abde6b1c57ec7999659dae12b3c22381a}{solve\+\_\+equation()}} в случае, если а = 0 (то есть уравнение является линейным) \mbox{\Hypertarget{solution_8c_ae83fcdbeb2b6757fc741ae953b633ee1}\label{solution_8c_ae83fcdbeb2b6757fc741ae953b633ee1}} 
+Данная функция вызывается функцией \mbox{\hyperlink{_title_8h_abde6b1c57ec7999659dae12b3c22381a}{solve\+\_\+equation()}} в случае, если а = 0 (то есть уравнение является линейным) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56                                                                      \{}
+\DoxyCodeLine{57     assert(Coef != NULL);}
+\DoxyCodeLine{58     assert(\mbox{\hyperlink{solution_8c_a30d57371ed898919fdb5dc7e1c75885f}{check\_Coef}}(Coef));}
+\DoxyCodeLine{59     assert(ans != NULL);}
+\DoxyCodeLine{60     \textcolor{keywordflow}{if} (\mbox{\hyperlink{solution_8c_a691251a85d291870cde16e5fea2fae1f}{iseallity}}(0, Coef-\/>\mbox{\hyperlink{struct_coefficients_ac8453ba82f253f66045a84645d001c37}{b}})) \{}
+\DoxyCodeLine{61         \textcolor{keywordflow}{if} (\mbox{\hyperlink{solution_8c_a691251a85d291870cde16e5fea2fae1f}{iseallity}}(0, Coef-\/>\mbox{\hyperlink{struct_coefficients_a3a8a6e5cc52fbaa075ef61983d441eed}{c}})) \{}
+\DoxyCodeLine{62             (*ans).amount = \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9dac4ed77dc1583aaa27653604f06f49176}{INFINIT}};}
+\DoxyCodeLine{63         \}}
+\DoxyCodeLine{64         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{65             (*ans).amount = \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9dae117e3533122c80b262257b49b21cddf}{ZERO}};}
+\DoxyCodeLine{66         \}}
+\DoxyCodeLine{67     \}}
+\DoxyCodeLine{68     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{69         (*ans).amount = \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9da7a725f13af144bdef532d0389ba75e0d}{ONE}};}
+\DoxyCodeLine{70         (*ans).roots[0] = -\/(*Coef).c / (*Coef).b;}
+\DoxyCodeLine{71     \}}
+\DoxyCodeLine{72 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{solution_8c_ae83fcdbeb2b6757fc741ae953b633ee1}\label{solution_8c_ae83fcdbeb2b6757fc741ae953b633ee1}} 
 \index{solution.c@{solution.c}!menu@{menu}}
 \index{menu@{menu}!solution.c@{solution.c}}
 \doxysubsubsection{\texorpdfstring{menu()}{menu()}}
@@ -98,7 +183,30 @@ int \mbox{\hyperlink{solution_8c_a691251a85d291870cde16e5fea2fae1f}{iseallity}} 
 
 Функция главного меню 
 
-Функция спрашивает у пользователя, хочет ли он решить новое уравнение или проверить программу на экстремальных значениях \mbox{\Hypertarget{solution_8c_a6f0b0ef842999aa0fca0180aa6e7c6cd}\label{solution_8c_a6f0b0ef842999aa0fca0180aa6e7c6cd}} 
+Функция спрашивает у пользователя, хочет ли он решить новое уравнение или проверить программу на экстремальных значениях 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{114           \{}
+\DoxyCodeLine{115     printf(\textcolor{stringliteral}{"Do you want to solve your equation or check the boundary values? \(\backslash\)n"});}
+\DoxyCodeLine{116     printf(\textcolor{stringliteral}{"a) Solve       b)Check \(\backslash\)n"});}
+\DoxyCodeLine{117     \textcolor{keywordtype}{char} ch;}
+\DoxyCodeLine{118     scanf(\textcolor{stringliteral}{"\%c"}, \&ch);}
+\DoxyCodeLine{119     \textcolor{keywordflow}{while} (!strchr(\textcolor{stringliteral}{"ab"}, ch))\{}
+\DoxyCodeLine{120         printf(\textcolor{stringliteral}{"Just enter \(\backslash\)"a\(\backslash\)" or \(\backslash\)"b\(\backslash\)" "});}
+\DoxyCodeLine{121         \mbox{\hyperlink{solution_8c_a4a444f3cac3d74fbf555e1bb2a28f06d}{eatline}}();}
+\DoxyCodeLine{122         scanf(\textcolor{stringliteral}{"\%c"}, \&ch);}
+\DoxyCodeLine{123     \}}
+\DoxyCodeLine{124     \mbox{\hyperlink{solution_8c_a4a444f3cac3d74fbf555e1bb2a28f06d}{eatline}}();}
+\DoxyCodeLine{125     \textcolor{keywordflow}{if}  (ch == \textcolor{charliteral}{'a'})\{}
+\DoxyCodeLine{126         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{127     \}}
+\DoxyCodeLine{128     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{129         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{130     \}}
+\DoxyCodeLine{131     }
+\DoxyCodeLine{132 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{solution_8c_a6f0b0ef842999aa0fca0180aa6e7c6cd}\label{solution_8c_a6f0b0ef842999aa0fca0180aa6e7c6cd}} 
 \index{solution.c@{solution.c}!print\_answers@{print\_answers}}
 \index{print\_answers@{print\_answers}!solution.c@{solution.c}}
 \doxysubsubsection{\texorpdfstring{print\_answers()}{print\_answers()}}
@@ -113,7 +221,28 @@ int \mbox{\hyperlink{solution_8c_a691251a85d291870cde16e5fea2fae1f}{iseallity}} 
 {\em ans} & Структура для хранения ответа\\
 \hline
 \end{DoxyParams}
-Данная функция выводит члены структуры \mbox{\hyperlink{struct_answers}{Answers}}, а именно количество корней и их значения (если они существуют). \mbox{\Hypertarget{solution_8c_abde6b1c57ec7999659dae12b3c22381a}\label{solution_8c_abde6b1c57ec7999659dae12b3c22381a}} 
+Данная функция выводит члены структуры \mbox{\hyperlink{struct_answers}{Answers}}, а именно количество корней и их значения (если они существуют). 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{95                                         \{}
+\DoxyCodeLine{96     assert(ans != NULL);}
+\DoxyCodeLine{97     \textcolor{keywordflow}{switch} (ans-\/>\mbox{\hyperlink{struct_answers_a55636e96e38928c8143ab3dec4c46f8a}{amount}}) \{}
+\DoxyCodeLine{98     \textcolor{keywordflow}{case} \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9dae117e3533122c80b262257b49b21cddf}{ZERO}}:}
+\DoxyCodeLine{99         printf(\textcolor{stringliteral}{"The equation has no solutions \(\backslash\)n"});}
+\DoxyCodeLine{100         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{101     \textcolor{keywordflow}{case} \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9da7a725f13af144bdef532d0389ba75e0d}{ONE}}:}
+\DoxyCodeLine{102         printf(\textcolor{stringliteral}{"The equation has one solution x = \%lg \(\backslash\)n"}, ans-\/>\mbox{\hyperlink{struct_answers_a086a79ca8485d1651289c661b0225418}{roots}}[0]);}
+\DoxyCodeLine{103         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{104     \textcolor{keywordflow}{case} \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9da0e793500a63ffa575b9b712ca3bc9851}{TWO}}:}
+\DoxyCodeLine{105         printf(\textcolor{stringliteral}{"The equation has one solution x1 = \% lg   x2 = \%lg \(\backslash\)n"}, ans-\/>\mbox{\hyperlink{struct_answers_a086a79ca8485d1651289c661b0225418}{roots}}[0], ans-\/>\mbox{\hyperlink{struct_answers_a086a79ca8485d1651289c661b0225418}{roots}}[1]);}
+\DoxyCodeLine{106         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{107     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{108         printf(\textcolor{stringliteral}{"The equation has an infinite number of solutions \(\backslash\)n"});}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110     \}}
+\DoxyCodeLine{111 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{solution_8c_abde6b1c57ec7999659dae12b3c22381a}\label{solution_8c_abde6b1c57ec7999659dae12b3c22381a}} 
 \index{solution.c@{solution.c}!solve\_equation@{solve\_equation}}
 \index{solve\_equation@{solve\_equation}!solution.c@{solution.c}}
 \doxysubsubsection{\texorpdfstring{solve\_equation()}{solve\_equation()}}
@@ -130,7 +259,22 @@ int \mbox{\hyperlink{solution_8c_a691251a85d291870cde16e5fea2fae1f}{iseallity}} 
 {\em Coef} & Структура для хранения коэффициентов уравнения\\
 \hline
 \end{DoxyParams}
-Данная функция вызывает функцию \mbox{\hyperlink{_title_8h_a8cb3515b523dac7fd1f9104e840558bb}{linear\+\_\+equation()}}, если уравнение является линейным (а = 0) и вызывает функцию the\+\_\+quadratic\+\_\+equation в противном случае. \mbox{\Hypertarget{solution_8c_af428fc888cc653bceff8ef36e8c2d710}\label{solution_8c_af428fc888cc653bceff8ef36e8c2d710}} 
+Данная функция вызывает функцию \mbox{\hyperlink{_title_8h_a8cb3515b523dac7fd1f9104e840558bb}{linear\+\_\+equation()}}, если уравнение является линейным (а = 0) и вызывает функцию the\+\_\+quadratic\+\_\+equation в противном случае. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                                                                     \{}
+\DoxyCodeLine{44     assert(Coef != NULL);}
+\DoxyCodeLine{45     assert(\mbox{\hyperlink{solution_8c_a30d57371ed898919fdb5dc7e1c75885f}{check\_Coef}}(Coef));}
+\DoxyCodeLine{46     assert(ans != NULL);}
+\DoxyCodeLine{47     \textcolor{keywordflow}{if} (\mbox{\hyperlink{solution_8c_a691251a85d291870cde16e5fea2fae1f}{iseallity}}(0, Coef-\/>\mbox{\hyperlink{struct_coefficients_a65e5bf727bb68e304b280a0d74db7622}{a}})) \{}
+\DoxyCodeLine{48         \mbox{\hyperlink{solution_8c_a8cb3515b523dac7fd1f9104e840558bb}{linear\_equation}}(ans, Coef);}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{50     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{51         \mbox{\hyperlink{solution_8c_af428fc888cc653bceff8ef36e8c2d710}{the\_quadratic\_equation}}(ans, Coef);}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{solution_8c_af428fc888cc653bceff8ef36e8c2d710}\label{solution_8c_af428fc888cc653bceff8ef36e8c2d710}} 
 \index{solution.c@{solution.c}!the\_quadratic\_equation@{the\_quadratic\_equation}}
 \index{the\_quadratic\_equation@{the\_quadratic\_equation}!solution.c@{solution.c}}
 \doxysubsubsection{\texorpdfstring{the\_quadratic\_equation()}{the\_quadratic\_equation()}}
@@ -147,7 +291,30 @@ int \mbox{\hyperlink{solution_8c_a691251a85d291870cde16e5fea2fae1f}{iseallity}} 
 {\em Coef} & Структура для хранения коэффициентов уравнения\\
 \hline
 \end{DoxyParams}
-Данная функция вызывается функцией \mbox{\hyperlink{_title_8h_abde6b1c57ec7999659dae12b3c22381a}{solve\+\_\+equation()}} в случае, если а != 0 (то есть уравнение является квадратным). Решение происходит через дискриминант. \mbox{\Hypertarget{solution_8c_a08bb5542e39378159307e75169a9df73}\label{solution_8c_a08bb5542e39378159307e75169a9df73}} 
+Данная функция вызывается функцией \mbox{\hyperlink{_title_8h_abde6b1c57ec7999659dae12b3c22381a}{solve\+\_\+equation()}} в случае, если а != 0 (то есть уравнение является квадратным). Решение происходит через дискриминант. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75                                                                             \{}
+\DoxyCodeLine{76     assert(Coef != NULL);}
+\DoxyCodeLine{77     assert(\mbox{\hyperlink{solution_8c_a30d57371ed898919fdb5dc7e1c75885f}{check\_Coef}}(Coef));}
+\DoxyCodeLine{78     assert(ans != NULL);}
+\DoxyCodeLine{79     \textcolor{keywordtype}{double} diskr = Coef-\/>\mbox{\hyperlink{struct_coefficients_ac8453ba82f253f66045a84645d001c37}{b}} * Coef-\/>\mbox{\hyperlink{struct_coefficients_ac8453ba82f253f66045a84645d001c37}{b}} -\/ 4 * Coef-\/>\mbox{\hyperlink{struct_coefficients_a65e5bf727bb68e304b280a0d74db7622}{a}} * Coef-\/>\mbox{\hyperlink{struct_coefficients_a3a8a6e5cc52fbaa075ef61983d441eed}{c}};}
+\DoxyCodeLine{80     \textcolor{keywordflow}{if} (diskr < 0) \{}
+\DoxyCodeLine{81         ans-\/>\mbox{\hyperlink{struct_answers_a55636e96e38928c8143ab3dec4c46f8a}{amount}} = \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9dae117e3533122c80b262257b49b21cddf}{ZERO}};}
+\DoxyCodeLine{82     \}}
+\DoxyCodeLine{83     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{84         \textcolor{keywordflow}{if} (\mbox{\hyperlink{solution_8c_a691251a85d291870cde16e5fea2fae1f}{iseallity}}(diskr, 0)) \{}
+\DoxyCodeLine{85             ans-\/>\mbox{\hyperlink{struct_answers_a55636e96e38928c8143ab3dec4c46f8a}{amount}} = \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9da7a725f13af144bdef532d0389ba75e0d}{ONE}};}
+\DoxyCodeLine{86             ans-\/>\mbox{\hyperlink{struct_answers_a086a79ca8485d1651289c661b0225418}{roots}}[0] = -\/(Coef-\/>\mbox{\hyperlink{struct_coefficients_ac8453ba82f253f66045a84645d001c37}{b}}) / (2 * (Coef-\/>\mbox{\hyperlink{struct_coefficients_a65e5bf727bb68e304b280a0d74db7622}{a}}));}
+\DoxyCodeLine{87         \}}
+\DoxyCodeLine{88         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{89             ans-\/>\mbox{\hyperlink{struct_answers_a55636e96e38928c8143ab3dec4c46f8a}{amount}} = \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9da0e793500a63ffa575b9b712ca3bc9851}{TWO}};}
+\DoxyCodeLine{90             ans-\/>\mbox{\hyperlink{struct_answers_a086a79ca8485d1651289c661b0225418}{roots}}[0] = (-\/(Coef-\/>\mbox{\hyperlink{struct_coefficients_ac8453ba82f253f66045a84645d001c37}{b}}) -\/ sqrt(diskr)) / (2 * (Coef-\/>\mbox{\hyperlink{struct_coefficients_a65e5bf727bb68e304b280a0d74db7622}{a}}));}
+\DoxyCodeLine{91             ans-\/>\mbox{\hyperlink{struct_answers_a086a79ca8485d1651289c661b0225418}{roots}}[1] = (-\/(Coef-\/>\mbox{\hyperlink{struct_coefficients_ac8453ba82f253f66045a84645d001c37}{b}}) + sqrt(diskr)) / (2 * (Coef-\/>\mbox{\hyperlink{struct_coefficients_a65e5bf727bb68e304b280a0d74db7622}{a}}));}
+\DoxyCodeLine{92         \}}
+\DoxyCodeLine{93 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{solution_8c_a08bb5542e39378159307e75169a9df73}\label{solution_8c_a08bb5542e39378159307e75169a9df73}} 
 \index{solution.c@{solution.c}!wrong\_input@{wrong\_input}}
 \index{wrong\_input@{wrong\_input}!solution.c@{solution.c}}
 \doxysubsubsection{\texorpdfstring{wrong\_input()}{wrong\_input()}}
@@ -158,3 +325,9 @@ int \mbox{\hyperlink{solution_8c_a691251a85d291870cde16e5fea2fae1f}{iseallity}} 
 Функция повторного ввода 
 
 При неверном формате ввода коэффициентов данная функция запрашивает у пользователя повторный ввод данных, выводя перед этим сообщение \char`\"{}\+Just enter a number\char`\"{}. Используется совместно с \mbox{\hyperlink{_title_8h_a4a444f3cac3d74fbf555e1bb2a28f06d}{eatline()}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38                    \{}
+\DoxyCodeLine{39     printf(\textcolor{stringliteral}{"Just enter a number \(\backslash\)n"});}
+\DoxyCodeLine{40 \}}
+
+\end{DoxyCode}

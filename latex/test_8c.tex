@@ -32,6 +32,31 @@ bool \mbox{\hyperlink{test_8c_a748b27735bc50f2c2e750c1e1a1eb5f9}{compair}} (\mbo
 {\em ans1} & Структура, хранящая ответ, полученный программой \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74                                                  \{}
+\DoxyCodeLine{75     assert(test);}
+\DoxyCodeLine{76     assert(ans1);}
+\DoxyCodeLine{77     \mbox{\hyperlink{solution_8c_abde6b1c57ec7999659dae12b3c22381a}{solve\_equation}}(ans1, \&(test-\/>\mbox{\hyperlink{struct_test_a996e49b0e70c64dc2eea69daaa42464d}{Coef}}));}
+\DoxyCodeLine{78     \textcolor{keywordflow}{if} (ans1-\/>\mbox{\hyperlink{struct_answers_a55636e96e38928c8143ab3dec4c46f8a}{amount}} == test-\/>\mbox{\hyperlink{struct_test_a2aa540a2dedf234cfc13dffa07ffd62d}{Ans}}.\mbox{\hyperlink{struct_answers_a55636e96e38928c8143ab3dec4c46f8a}{amount}})\{}
+\DoxyCodeLine{79         \textcolor{keywordflow}{if} (test-\/>\mbox{\hyperlink{struct_test_a2aa540a2dedf234cfc13dffa07ffd62d}{Ans}}.\mbox{\hyperlink{struct_answers_a55636e96e38928c8143ab3dec4c46f8a}{amount}} == \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9dae117e3533122c80b262257b49b21cddf}{ZERO}} || test-\/>\mbox{\hyperlink{struct_test_a2aa540a2dedf234cfc13dffa07ffd62d}{Ans}}.\mbox{\hyperlink{struct_answers_a55636e96e38928c8143ab3dec4c46f8a}{amount}} == \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9dac4ed77dc1583aaa27653604f06f49176}{INFINIT}})\{}
+\DoxyCodeLine{80             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{81         \}}
+\DoxyCodeLine{82         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{83             \textcolor{keywordflow}{if} (fabs(ans1-\/>\mbox{\hyperlink{struct_answers_a086a79ca8485d1651289c661b0225418}{roots}}[0] -\/ test-\/>\mbox{\hyperlink{struct_test_a2aa540a2dedf234cfc13dffa07ffd62d}{Ans}}.\mbox{\hyperlink{struct_answers_a086a79ca8485d1651289c661b0225418}{roots}}[0]) < \mbox{\hyperlink{_title_8h_a554f7b66b1ba49443447eb746978c268}{zero}})\{}
+\DoxyCodeLine{84                 \textcolor{keywordflow}{if} (ans1-\/>\mbox{\hyperlink{struct_answers_a55636e96e38928c8143ab3dec4c46f8a}{amount}} == \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9da0e793500a63ffa575b9b712ca3bc9851}{TWO}} \&\& fabs(ans1-\/>\mbox{\hyperlink{struct_answers_a086a79ca8485d1651289c661b0225418}{roots}}[1] -\/ test-\/>\mbox{\hyperlink{struct_test_a2aa540a2dedf234cfc13dffa07ffd62d}{Ans}}.\mbox{\hyperlink{struct_answers_a086a79ca8485d1651289c661b0225418}{roots}}[1]) < \mbox{\hyperlink{_title_8h_a554f7b66b1ba49443447eb746978c268}{zero}})\{}
+\DoxyCodeLine{85                     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{86                 \}}
+\DoxyCodeLine{87                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ans1-\/>\mbox{\hyperlink{struct_answers_a55636e96e38928c8143ab3dec4c46f8a}{amount}} == \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9da7a725f13af144bdef532d0389ba75e0d}{ONE}})\{}
+\DoxyCodeLine{88                     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{89                 \}}
+\DoxyCodeLine{90             \}}
+\DoxyCodeLine{91         \}}
+\DoxyCodeLine{92     \}}
+\DoxyCodeLine{93     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{94 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{test_8c_aaade6fb4ca13d25274b2f20873541b29}\label{test_8c_aaade6fb4ca13d25274b2f20873541b29}} 
 \index{test.c@{test.c}!input\_s@{input\_s}}
 \index{input\_s@{input\_s}!test.c@{test.c}}
@@ -47,6 +72,46 @@ bool \mbox{\hyperlink{test_8c_a748b27735bc50f2c2e750c1e1a1eb5f9}{compair}} (\mbo
 {\em test} & Массив структур, хранящих в себе данные о тестах \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                              \{}
+\DoxyCodeLine{38     assert(test);}
+\DoxyCodeLine{39     (*test)[0].Coef = \{0\};}
+\DoxyCodeLine{40     (*test)[0].Ans.amount = \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9dac4ed77dc1583aaa27653604f06f49176}{INFINIT}};}
+\DoxyCodeLine{41     }
+\DoxyCodeLine{42     (*test)[1].Coef.a = 0;}
+\DoxyCodeLine{43     (*test)[1].Coef.b = 0;}
+\DoxyCodeLine{44     (*test)[1].Coef.c = 1;}
+\DoxyCodeLine{45     (*test)[1].Ans.amount = \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9dae117e3533122c80b262257b49b21cddf}{ZERO}};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     (*test)[2].Coef.a = 0;}
+\DoxyCodeLine{48     (*test)[2].Coef.b = 8;}
+\DoxyCodeLine{49     (*test)[2].Coef.c = 4;}
+\DoxyCodeLine{50     (*test)[2].Ans.amount = \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9da7a725f13af144bdef532d0389ba75e0d}{ONE}};}
+\DoxyCodeLine{51     (*test)[2].Ans.roots[0] = -\/0.5;}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     (*test)[3].Coef.a = 25;}
+\DoxyCodeLine{54     (*test)[3].Coef.b = 0;}
+\DoxyCodeLine{55     (*test)[3].Coef.c = 1;}
+\DoxyCodeLine{56     (*test)[3].Ans.amount = \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9dae117e3533122c80b262257b49b21cddf}{ZERO}};}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     (*test)[4].Coef.a = 25;}
+\DoxyCodeLine{59     (*test)[4].Coef.b = 0;}
+\DoxyCodeLine{60     (*test)[4].Coef.c = -\/1;}
+\DoxyCodeLine{61     (*test)[4].Ans.amount = \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9da0e793500a63ffa575b9b712ca3bc9851}{TWO}};}
+\DoxyCodeLine{62     (*test)[4].Ans.roots[0] = -\/0.2;}
+\DoxyCodeLine{63     (*test)[4].Ans.roots[1] = 0.2;}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     (*test)[5].Coef.a = 25;}
+\DoxyCodeLine{66     (*test)[5].Coef.b = 5;}
+\DoxyCodeLine{67     (*test)[5].Coef.c = 0;}
+\DoxyCodeLine{68     (*test)[5].Ans.amount = \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9da0e793500a63ffa575b9b712ca3bc9851}{TWO}};}
+\DoxyCodeLine{69     (*test)[5].Ans.roots[0] = -\/0.2;}
+\DoxyCodeLine{70     (*test)[5].Ans.roots[1] = 0;}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{test_8c_aa708dbd706e927541a11028c0741e078}\label{test_8c_aa708dbd706e927541a11028c0741e078}} 
 \index{test.c@{test.c}!UnitTestSolution@{UnitTestSolution}}
 \index{UnitTestSolution@{UnitTestSolution}!test.c@{test.c}}
@@ -58,3 +123,38 @@ bool \mbox{\hyperlink{test_8c_a748b27735bc50f2c2e750c1e1a1eb5f9}{compair}} (\mbo
 Функция, тестирующая программу на экстремальных значениях 
 
 Данная функция принимает коэффициенты уравнения и эталонный ответ и сравнивает с ответом, который получается функция решения. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4                           \{}
+\DoxyCodeLine{5     \textcolor{keywordtype}{int} ind = 1;}
+\DoxyCodeLine{6     \mbox{\hyperlink{struct_test}{TEST}} test[6];}
+\DoxyCodeLine{7     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 6; i++)\{}
+\DoxyCodeLine{8         test[i].\mbox{\hyperlink{struct_test_a2aa540a2dedf234cfc13dffa07ffd62d}{Ans}} = \{\mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9dae117e3533122c80b262257b49b21cddf}{ZERO}}, \{NAN,NAN\}\};}
+\DoxyCodeLine{9         test[i].\mbox{\hyperlink{struct_test_a996e49b0e70c64dc2eea69daaa42464d}{Coef}} = \{1\};}
+\DoxyCodeLine{10     \}}
+\DoxyCodeLine{11     \mbox{\hyperlink{test_8c_aaade6fb4ca13d25274b2f20873541b29}{input\_s}}(\&test);}
+\DoxyCodeLine{12     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 6; i++)\{}
+\DoxyCodeLine{13         \textcolor{keyword}{struct }\mbox{\hyperlink{struct_answers}{Answers}} ans1 = \{\mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9dae117e3533122c80b262257b49b21cddf}{ZERO}}, \{NAN, NAN\}\};}
+\DoxyCodeLine{14         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{test_8c_a748b27735bc50f2c2e750c1e1a1eb5f9}{compair}}(\&(test[i]), \&ans1))\{}
+\DoxyCodeLine{15             printf(\textcolor{stringliteral}{"Something wrong i = \%d \(\backslash\)n"}, i);}
+\DoxyCodeLine{16             ind = 0;}
+\DoxyCodeLine{17             printf(\textcolor{stringliteral}{"Coefficients: a = \%lg, b = \%lg, c = \%lg \(\backslash\)n"}, test[i].Coef.a, test[i].Coef.b, test[i].Coef.c);}
+\DoxyCodeLine{18             printf(\textcolor{stringliteral}{"Roots: "});}
+\DoxyCodeLine{19             \textcolor{keywordflow}{if} (test[i].Ans.amount != \mbox{\hyperlink{_title_8h_a205e037d08a5161254a1965cb7c03b9dac4ed77dc1583aaa27653604f06f49176}{INFINIT}})\{}
+\DoxyCodeLine{20                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < i; j++)\{}
+\DoxyCodeLine{21                     printf(\textcolor{stringliteral}{"x\%d = \%lg "}, i, test[i].Ans.roots[j]);}
+\DoxyCodeLine{22                 \}}
+\DoxyCodeLine{23             \}}
+\DoxyCodeLine{24             printf(\textcolor{stringliteral}{"\(\backslash\)n The received response: "});}
+\DoxyCodeLine{25             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < ans1.\mbox{\hyperlink{struct_answers_a55636e96e38928c8143ab3dec4c46f8a}{amount}}; j++)\{}
+\DoxyCodeLine{26                 printf(\textcolor{stringliteral}{"x\%d = \%lg "}, j, ans1.\mbox{\hyperlink{struct_answers_a086a79ca8485d1651289c661b0225418}{roots}}[j]);}
+\DoxyCodeLine{27             \}}
+\DoxyCodeLine{28             printf(\textcolor{stringliteral}{"\(\backslash\)n"});}
+\DoxyCodeLine{29         \}}
+\DoxyCodeLine{30         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{31             printf(\textcolor{stringliteral}{"All right :) \(\backslash\)n"});}
+\DoxyCodeLine{32         \}}
+\DoxyCodeLine{33     \}}
+\DoxyCodeLine{34     \textcolor{keywordflow}{return} ind;   }
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
