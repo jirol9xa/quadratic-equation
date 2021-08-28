@@ -103,17 +103,20 @@ void print_answers(struct Answers* ans) {
 	assert(check_Ans(ans));
 
 	switch (ans->amount) {
-	case ZERO:
-		printf("The equation has no solutions \n");
-		break;
-	case ONE:
-		printf("The equation has one solution x = %lg \n", ans->roots[0]);
-		break;
-	case TWO:
-		printf("The equation has one solution x1 = % lg   x2 = %lg \n", ans->roots[0], ans->roots[1]);
-		break;
-	default:
-		printf("The equation has an infinite number of solutions \n");
+		case ZERO:
+			printf("The equation has no solutions \n");
+			break;
+
+		case ONE:
+			printf("The equation has one solution x = %lg \n", ans->roots[0]);
+			break;
+
+		case TWO:
+			printf("The equation has one solution x1 = % lg   x2 = %lg \n", ans->roots[0], ans->roots[1]);
+			break;
+
+		default:
+			printf("The equation has an infinite number of solutions \n");
 
 	}
 }
@@ -123,7 +126,7 @@ int menu(){
 	printf("Do you want to solve your equation or check the boundary values? \n");
 	printf("a) Solve       b)Check \n");
 
-	char ch;
+	char ch = 0;
 	scanf("%c", &ch);
 	while (!strchr("ab", ch)){
 		printf("Just enter \"a\" or \"b\" ");
