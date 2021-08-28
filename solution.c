@@ -133,9 +133,9 @@ int menu(){
 
 
 int check_Coef(struct Coefficients * Coef){
-	if (!isinf(Coef->a) &&
-		!isinf(Coef->b) &&
-		!isinf(Coef->c)){
+	if (!isinf(Coef->a) && !isnan(Coef->a) &&
+		!isinf(Coef->b) && !isnan(Coef->b) &&
+		!isinf(Coef->c) && !isnan(Coef->c)){
 			return 1;
 		}
 	else{
