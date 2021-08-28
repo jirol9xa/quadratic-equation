@@ -3,7 +3,6 @@
 
 void input(struct Coefficients* Coef) {
 	assert(Coef != NULL);
-	assert(check_Coef(Coef));
 	printf("Now enter the values a, b, c \n");
 	do{
 		printf("enter a \n");
@@ -23,10 +22,9 @@ void input(struct Coefficients* Coef) {
 			wrong_input();
 			eatline();
 		}
-		printf("We check the coefficients for admissibility \n");
+		printf("We're checking the coefficients for admissibility \n");
 	}
-	while(check_Coef(Coef) != 1);
-	printf("Now answer: \n");
+	while(!check_Coef(Coef));
 }
 
 
@@ -46,7 +44,7 @@ void solve_equation(struct Answers* ans, struct Coefficients* Coef) {
 	assert(Coef != NULL);
 	assert(check_Coef(Coef));
 	assert(ans != NULL);
-	if (fabs(Coef->a) < zero) {
+	if (iseallity(0, Coef->a)) {
 		linear_equation(ans, Coef);
 	}
 	else {
@@ -59,8 +57,8 @@ void linear_equation(struct Answers* ans, struct Coefficients* Coef) {
 	assert(Coef != NULL);
 	assert(check_Coef(Coef));
 	assert(ans != NULL);
-	if (fabs((*Coef).b) < zero) {
-		if (fabs((*Coef).c) < zero) {
+	if (iseallity(0, Coef->b)) {
+		if (iseallity(0, Coef->c)) {
 			(*ans).amount = INFINIT;
 		}
 		else {
@@ -83,7 +81,7 @@ void the_quadratic_equation(struct Answers* ans, struct Coefficients* Coef) {
 		ans->amount = ZERO;
 	}
 	else
-        if (fabs(diskr - 0) < zero) {
+        if (iseallity(diskr, 0)) {
 		    ans->amount = ONE;
 		    ans->roots[0] = -(Coef->b) / (2 * (Coef->a));
 	    }
@@ -120,10 +118,10 @@ int menu(){
 	scanf("%c", &ch);
 	while (!strchr("ab", ch)){
 		printf("Just enter \"a\" or \"b\" ");
-		while (getchar() != '\n')
-			continue;
+		eatline();
 		scanf("%c", &ch);
 	}
+	eatline();
 	if  (ch == 'a'){
 		return 1;
 	}
@@ -135,11 +133,21 @@ int menu(){
 
 
 int check_Coef(struct Coefficients * Coef){
-	if (Coef->a != NAN && !isfinite(Coef->a) &&
-		Coef->b != NAN && !isfinite(Coef->b) &&
-		Coef->c != NAN && !isfinite(Coef->c)){
+	if (!isinf(Coef->a) &&
+		!isinf(Coef->b) &&
+		!isinf(Coef->c)){
 			return 1;
 		}
-	return 0;
+	else{
+		return 0;
+	}
 }
 
+int iseallity(double a, double b){
+	if (fabs(a - b) < zero){
+		return 1;
+	}
+	else{
+		return 0;
+	}
+}

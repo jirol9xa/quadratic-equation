@@ -151,4 +151,10 @@ int menu(void);
 int check_Coef(struct Coefficients * Coef);
 
 
+/*!
+	Функция, проверяющая числа double на равенство
+*/
+int iseallity(double, double);
+
+
 const double zero = 1e-20;
