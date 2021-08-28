@@ -74,9 +74,7 @@ $(function() {
 <div class="center"><img src="solution_8c__incl.png" border="0" usemap="#solution_8c" alt=""/></div>
 <!-- MAP 0 -->
 </div>
-</div>
-<p><a href="solution_8c_source.html">См. исходные тексты.</a></p>
-<table class="memberdecls">
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Функции</h2></td></tr>
 <tr class="memitem:a3a73fa202e2b7b11d736f6d525070e69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solution_8c.html#a3a73fa202e2b7b11d736f6d525070e69">input</a> (struct <a class="el" href="struct_coefficients.html">Coefficients</a> *Coef)</td></tr>
@@ -100,11 +98,35 @@ $(function() {
 <tr class="memitem:a6f0b0ef842999aa0fca0180aa6e7c6cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solution_8c.html#a6f0b0ef842999aa0fca0180aa6e7c6cd">print_answers</a> (struct <a class="el" href="struct_answers.html">Answers</a> *ans)</td></tr>
 <tr class="memdesc:a6f0b0ef842999aa0fca0180aa6e7c6cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для вывода ответа  <a href="solution_8c.html#a6f0b0ef842999aa0fca0180aa6e7c6cd">Подробнее...</a><br /></td></tr>
 <tr class="separator:a6f0b0ef842999aa0fca0180aa6e7c6cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a849a264c2c3431ebc12e776075ad0054"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solution_8c.html#a849a264c2c3431ebc12e776075ad0054">menu</a> (struct <a class="el" href="struct_answers.html">Answers</a> *ans, struct <a class="el" href="struct_coefficients.html">Coefficients</a> *Coef)</td></tr>
-<tr class="memdesc:a849a264c2c3431ebc12e776075ad0054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция главного меню  <a href="solution_8c.html#a849a264c2c3431ebc12e776075ad0054">Подробнее...</a><br /></td></tr>
-<tr class="separator:a849a264c2c3431ebc12e776075ad0054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae83fcdbeb2b6757fc741ae953b633ee1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solution_8c.html#ae83fcdbeb2b6757fc741ae953b633ee1">menu</a> ()</td></tr>
+<tr class="memdesc:ae83fcdbeb2b6757fc741ae953b633ee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция главного меню  <a href="solution_8c.html#ae83fcdbeb2b6757fc741ae953b633ee1">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae83fcdbeb2b6757fc741ae953b633ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30d57371ed898919fdb5dc7e1c75885f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solution_8c.html#a30d57371ed898919fdb5dc7e1c75885f">check_Coef</a> (struct <a class="el" href="struct_coefficients.html">Coefficients</a> *Coef)</td></tr>
+<tr class="memdesc:a30d57371ed898919fdb5dc7e1c75885f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция проверяющая коэффициента  <a href="solution_8c.html#a30d57371ed898919fdb5dc7e1c75885f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a30d57371ed898919fdb5dc7e1c75885f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Функции</h2>
+<a id="a30d57371ed898919fdb5dc7e1c75885f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30d57371ed898919fdb5dc7e1c75885f">&#9670;&nbsp;</a></span>check_Coef()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int check_Coef </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_coefficients.html">Coefficients</a> *&#160;</td>
+          <td class="paramname"><em>Coef</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция проверяющая коэффициента </p>
+<p>Функция, которая проверяет не равны ли коэффициенты NAN или infinity </p>
+
+</div>
+</div>
 <a id="a4a444f3cac3d74fbf555e1bb2a28f06d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a444f3cac3d74fbf555e1bb2a28f06d">&#9670;&nbsp;</a></span>eatline()</h2>
 
@@ -122,8 +144,6 @@ $(function() {
 
 <p>Функция очищения ввода </p>
 <p>При неверном формате ввода коэффициентов данная функция очищает входные данные, чтобы scanf() могла обработать следующую попытку ввода </p>
-
-<p class="definition">См. определение в файле <a class="el" href="solution_8c_source.html">solution.c</a> строка <a class="el" href="solution_8c_source.html#l00027">27</a></p>
 
 </div>
 </div>
@@ -152,8 +172,6 @@ $(function() {
 </dl>
 <p>Функция записывает в уже созданную структуру значения a,b и с <br  />
  </p>
-
-<p class="definition">См. определение в файле <a class="el" href="solution_8c_source.html">solution.c</a> строка <a class="el" href="solution_8c_source.html#l00004">4</a></p>
 
 </div>
 </div>
@@ -193,40 +211,26 @@ $(function() {
 </dl>
 <p>Данная функция вызывается функцией <a class="el" href="_title_8h.html#abde6b1c57ec7999659dae12b3c22381a" title="Функция, управляющая решением уравнения">solve_equation()</a> в случае, если а = 0 (то есть уравнение является линейным) </p>
 
-<p class="definition">См. определение в файле <a class="el" href="solution_8c_source.html">solution.c</a> строка <a class="el" href="solution_8c_source.html#l00051">51</a></p>
-
 </div>
 </div>
-<a id="a849a264c2c3431ebc12e776075ad0054"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a849a264c2c3431ebc12e776075ad0054">&#9670;&nbsp;</a></span>menu()</h2>
+<a id="ae83fcdbeb2b6757fc741ae953b633ee1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae83fcdbeb2b6757fc741ae953b633ee1">&#9670;&nbsp;</a></span>menu()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void menu </td>
+          <td class="memname">int menu </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="struct_answers.html">Answers</a> *&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="struct_coefficients.html">Coefficients</a> *&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Функция главного меню </p>
 <p>Функция спрашивает у пользователя, хочет ли он решить новое уравнение или проверить программу на экстремальных значениях </p>
-
-<p class="definition">См. определение в файле <a class="el" href="solution_8c_source.html">solution.c</a> строка <a class="el" href="solution_8c_source.html#l00107">107</a></p>
 
 </div>
 </div>
@@ -254,8 +258,6 @@ $(function() {
   </dd>
 </dl>
 <p>Данная функция выводит члены структуры <a class="el" href="struct_answers.html" title="Структура для хранения ответов">Answers</a>, а именно количество корней и их значения (если они существуют). </p>
-
-<p class="definition">См. определение в файле <a class="el" href="solution_8c_source.html">solution.c</a> строка <a class="el" href="solution_8c_source.html#l00088">88</a></p>
 
 </div>
 </div>
@@ -295,8 +297,6 @@ $(function() {
 </dl>
 <p>Данная функция вызывает функцию <a class="el" href="_title_8h.html#a8cb3515b523dac7fd1f9104e840558bb" title="Функция для решения линейного уравнения">linear_equation()</a>, если уравнение является линейным (а = 0) и вызывает функцию the_quadratic_equation в противном случае. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="solution_8c_source.html">solution.c</a> строка <a class="el" href="solution_8c_source.html#l00039">39</a></p>
-
 </div>
 </div>
 <a id="af428fc888cc653bceff8ef36e8c2d710"></a>
@@ -335,8 +335,6 @@ $(function() {
 </dl>
 <p>Данная функция вызывается функцией <a class="el" href="_title_8h.html#abde6b1c57ec7999659dae12b3c22381a" title="Функция, управляющая решением уравнения">solve_equation()</a> в случае, если а != 0 (то есть уравнение является квадратным). Решение происходит через дискриминант. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="solution_8c_source.html">solution.c</a> строка <a class="el" href="solution_8c_source.html#l00069">69</a></p>
-
 </div>
 </div>
 <a id="a08bb5542e39378159307e75169a9df73"></a>
@@ -356,8 +354,6 @@ $(function() {
 
 <p>Функция повторного ввода </p>
 <p>При неверном формате ввода коэффициентов данная функция запрашивает у пользователя повторный ввод данных, выводя перед этим сообщение "Just enter a number". Используется совместно с <a class="el" href="_title_8h.html#a4a444f3cac3d74fbf555e1bb2a28f06d" title="Функция очищения ввода">eatline()</a> </p>
-
-<p class="definition">См. определение в файле <a class="el" href="solution_8c_source.html">solution.c</a> строка <a class="el" href="solution_8c_source.html#l00034">34</a></p>
 
 </div>
 </div>
